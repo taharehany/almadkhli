@@ -79,7 +79,7 @@ header {
 	&.fixed {
 		.navbar {
 			top: 0;
-			background-color: $dark_color;
+			background-color: $main_color;
 			box-shadow: 0 10px 30px 0px rgb(0 0 0 / 8%);
 			border-bottom: 1px solid #3d3d3d;
 		}
@@ -586,10 +586,11 @@ header {
 //main slider
 section.main-slider {
 	background-color: #f9f9f9;
-	
+
 	.main-slider-carousel {
 		position: relative;
 		z-index: 9;
+
 		&::before {
 			content: "";
 			width: 164px;
@@ -601,7 +602,7 @@ section.main-slider {
 			background-repeat: no-repeat;
 			z-index: 2;
 		}
-	
+
 		&::after {
 			content: "";
 			width: 655px;
@@ -716,7 +717,7 @@ section.main-slider {
 		}
 	}
 
-	
+
 	.owl-theme {
 		.owl-nav {
 			position: absolute;
@@ -727,7 +728,7 @@ section.main-slider {
 			justify-content: space-between;
 			display: flex;
 			flex-direction: column;
-			
+
 			button {
 				height: 50px;
 				width: 50px;
@@ -735,15 +736,16 @@ section.main-slider {
 				border: none;
 				@include borderRadius(50%);
 				@extend %center;
-				background-color: rgba(255,255,255,.3);
-	
+				background-color: rgba(255, 255, 255, .3);
+
 				&:hover {
 					background-color: #fff;
+
 					i {
 						color: #000;
 					}
 				}
-				
+
 				i {
 					color: #fff;
 					line-height: 50px;
@@ -752,6 +754,7 @@ section.main-slider {
 				}
 			}
 		}
+
 		.owl-dots {
 			position: absolute;
 			right: 20px;
@@ -815,7 +818,7 @@ section.about {
 			h2 {
 				color: $dark_color;
 				margin-bottom: 0;
-				font-size: 3rem;
+				font-size: 2rem;
 
 				&::after {
 					display: none;
@@ -823,7 +826,7 @@ section.about {
 			}
 
 			p {
-				color: $second_color;
+				color: $main_color;
 			}
 		}
 
@@ -950,34 +953,54 @@ section.about {
 
 //video
 section.video {
-	padding: 200px 0;
-	position: relative;
-	display: flex;
-	align-items: center;
-	background-size: cover;
-	z-index: 1;
-
-	&::after {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgb(0 0 0 / 40%);
-		z-index: -1;
-	}
+	padding: $padding_section;
 
 	.content {
+		padding: 50px 0;
+		display: flex;
+		// align-items: center;
+		justify-content: flex-end;
+		background-size: cover;
+		@include borderRadius(10px);
+		position: relative;
+		z-index: 9;
+
+		.round-inner {
+			position: relative;
+			display: block;
+			width: 490px;
+			height: 490px;
+			padding: 190px 80px 50px 70px;
+			background-color: $main_color;
+			@include borderRadius(50%);
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: -65px;
+				top: -45px;
+				width: 490px;
+				height: 490px;
+				background: $dark_color;
+				opacity: 0.2;
+				border-radius: 50%;
+				z-index: -1;
+			}
+		}
+
 		.vid-icon {
 			text-align: center;
-			margin: 0 auto 50px;
-			background-color: #1a5db6;
+			position: absolute;
+			left: 55px;
+			top: 25px;
+			width: 84px;
+			height: 84px;
+			line-height: 84px;
+			font-size: 20px;
+			color: #ffffff;
+			background-color: $dark_color;
 			@include borderRadius(50%);
-			width: 90px;
-			height: 90px;
 			@extend %center;
-			position: relative;
 
 			&::before,
 			&::after {
@@ -1013,19 +1036,52 @@ section.video {
 			}
 		}
 
-		.vid-text {
-			color: #fff;
-			text-align: center;
+		.title {
+			margin-bottom: 20px;
 
-			p {
-				font-size: 22px
-			}
-
-			h2 {
-				font-size: 50px;
+			h3 {
+				font-size: 30px;
+				text-transform: uppercase;
 				font-weight: 600;
-				max-width: 880px;
-				margin: auto
+				color: #fff;
+			}
+		}
+
+		.more-link {
+			position: relative;
+			text-align: right;
+
+			a {
+				position: relative;
+				display: inline-block;
+				padding-bottom: 2px;
+				vertical-align: top;
+				color: #fff;
+				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				text-transform: uppercase;
+				@include transition(all ease 0.3s);
+				line-height: 1.25em;
+
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					border-bottom: 2px solid #fff;
+					@include transition(all ease 0.3s);
+				}
+
+				&:hover {
+					color: rgba(255, 255, 255, 0.3);
+
+					&::after {
+						border-color: rgba(255, 255, 255, 0.3);
+						transform: scaleX(0.5);
+					}
+				}
 			}
 		}
 	}
@@ -1050,19 +1106,14 @@ section.video {
 		box-shadow: 0 0 0 0 rgba(253, 167, 0, 0);
 	}
 }
+
 //video
 
 //expertise home
 section.expertise {
 	padding: $padding_section;
-
-	.main-title {
-		// text-align: center;
-
-		.top-title {
-			justify-content: center;
-		}
-	}
+	background: url(../images/bgs/pattern-2.png) left top repeat;
+	position: relative;
 
 	.content {
 		.col-box {
@@ -1071,7 +1122,7 @@ section.expertise {
 
 		.box {
 			padding: 25px;
-			height: 400px;
+			height: 480px;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -1079,6 +1130,7 @@ section.expertise {
 			@include transition(all ease 0.3s);
 			position: relative;
 			@include borderRadius(7px);
+			z-index: 2;
 
 			&:hover {
 				.icon {
@@ -1607,6 +1659,25 @@ section.team {
 					&:hover {
 						background-color: $second_color;
 						color: #fff;
+					}
+				}
+			}
+		}
+
+		.owl-theme {
+			.owl-dots {
+				.owl-dot {
+					span {
+						width: 12px;
+						height: 12px;
+						margin: 5px;
+					}
+
+					&.active {
+						span {
+							background-color: transparent;
+							border: 2px solid $second_color;
+						}
 					}
 				}
 			}
@@ -2257,7 +2328,7 @@ section.news {
 
 //footer
 footer {
-	background-color: $dark_color;
+	background-color: $main_color;
 	background-image: url(../images/bgs/footer-bg.png);
 	padding: 70px 0 0;
 
@@ -2267,7 +2338,7 @@ footer {
 		.footer-box {
 			.text {
 				p {
-					color: #999b9f;
+					color: #fff;
 					font-size: 14px;
 					line-height: 2em;
 					@extend %max_lines;
@@ -2279,7 +2350,7 @@ footer {
 					display: block;
 
 					img {
-						max-width: 250px;
+						max-width: 385px;
 					}
 				}
 
@@ -2305,11 +2376,11 @@ footer {
 
 				.links {
 					a {
-						color: rgb(165, 165, 165);
+						color: #000;
 						font-size: 14px;
 						margin-inline-end: 10px;
 						@include transition(all ease .3s);
-						background-color: #1c1e22;
+						background-color: #fff;
 						@include borderRadius(50%);
 						height: 40px;
 						width: 40px;
@@ -2345,7 +2416,7 @@ footer {
 					font-size: 14px;
 
 					a {
-						color: #999b9f;
+						color: #fff;
 						text-transform: capitalize;
 						@extend %max_lines;
 						-webkit-line-clamp: 1;
@@ -2371,7 +2442,7 @@ footer {
 			p {
 				list-style: none;
 				font-size: 16px;
-				color: #999b9f;
+				color: #fff;
 				margin-bottom: 15px;
 				padding-inline-start: 25px;
 
@@ -2383,7 +2454,7 @@ footer {
 			}
 
 			a {
-				color: #999b9f;
+				color: #fff;
 			}
 		}
 
@@ -2396,17 +2467,17 @@ footer {
 				font-weight: inherit;
 				padding: 0 15px;
 				font-size: 14px;
-				background: #1c1e22;
+				background: #fff;
 				font-weight: 400;
 				letter-spacing: 0;
-				color: #999b9f;
+				color: #000;
 				height: 50px;
 				@include borderRadius(0);
 				max-width: 350px;
 				margin-bottom: 30px;
 
 				&::placeholder {
-					color: #eee;
+					color: #000;
 				}
 
 				&:focus {
@@ -2421,7 +2492,7 @@ footer {
 				line-height: 50px;
 				color: #fff;
 				border: 0;
-				background-color: $second_color;
+				background-color: $dark_color;
 				padding: 0 15px;
 				font-size: 16px;
 
@@ -2437,7 +2508,7 @@ footer {
 			}
 
 			.hint {
-				color: #999b9f;
+				color: #fff;
 				font-size: 14px;
 			}
 		}
@@ -2450,7 +2521,7 @@ footer {
 
 			li {
 				position: relative;
-				color: #ffffff;
+				color: #fff;
 				font-size: 18px;
 				font-weight: 600;
 				line-height: 1.6em;
@@ -2481,7 +2552,7 @@ footer {
 		.copy-text {
 			p {
 				margin-bottom: 0;
-				color: #999b9f;
+				color: #fff;
 				font-size: 14px;
 				margin: 0;
 				text-transform: capitalize;

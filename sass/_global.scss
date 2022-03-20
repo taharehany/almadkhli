@@ -1,6 +1,6 @@
 //global variables 
 $main_color: #1027d4;
-$second_color: #D1A94F;
+$second_color: #FFDA7F;
 $dark_color: #222429;
 $gray: #7a8a9e;
 $padding_section: 80px 0;
@@ -116,14 +116,14 @@ $padding_section: 80px 0;
 
     h2 {
         display: inline-block;
-        font-size: 55px;
+        font-size: 34px;
         color: $dark_color;
         position: relative;
-        text-transform: capitalize;
-        font-weight: 500;
+        text-transform: uppercase;
+        font-weight: 600;
         margin-bottom: 20px;
         padding-bottom: 15px;
-        font-family: "Teko";
+        font-family: "Montserrat";
 
         &::after {
             content: ".";

@@ -123,7 +123,7 @@ $(document).ready(function () {
     autoplayTimeout: 3000,
     items: 4,
     nav: false,
-    dots: false,
+    dots: true,
     rtl: true,
     margin: 25,
     navText: ["<i class='bi bi-arrow-left'></i>", "<i class='bi bi-arrow-right'></i>"],
