@@ -998,11 +998,11 @@ section.video {
 			line-height: 84px;
 			font-size: 20px;
 			color: #ffffff;
-			background-color: $dark_color;
+			background-color: $second_color;
 			@include borderRadius(50%);
 			@extend %center;
 			z-index: 9;
-			outline: 1px solid $dark_color;
+			outline: 1px solid $second_color;
 			outline-offset: 7px;
 
 			&::before,
