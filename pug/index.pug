@@ -1,0 +1,47 @@
+include includes/variables.pug
+doctype 
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description" content="description is here")
+        meta(name="keywords" content="")
+        meta(name="author" content="Taha Alrehany")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(property="og:title" content="title is here")
+        meta(property="og:type" content="The type")
+        meta(property="og:url" content="http://url.com/")
+        meta(property="og:image" content="http://image.jpg")
+        meta(http-equiv="Content-Type" content="text/html; charset=utf-8")
+        link(rel="shortcut icon" href="images/favicon.png")
+        <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+        </script>
+        <![endif]-->
+        block website_title
+            title #{website_title} | home
+        include includes/styles.pug
+    body
+        div(class="main-wrapper")
+            //PreLoader
+            //- div(class="loader")
+                video(width="auto" height="auto" muted autoplay loop)
+                    source(src="video/loading.webm" type="video/mp4")
+                    source(src="videos/video.ogg" type="video/ogg")
+                    | Your browser does not support the video tag.
+            //- div(class="loader")
+                span(class="loader-circles")
+            //PreLoader
+
+            //social links
+            //- div(class="fixed-social-links")
+                div(class="links")
+                    a(href="#" aria-label="facebook" class="facebook bi bi-facebook")
+                    a(href="#" aria-label="twitter" class="twitter bi bi-twitter")
+                    a(href="#" aria-label="instagram" class="instagram bi bi-instagram")
+                    a(href="#" aria-label="linkedin" class="linkedin bi bi-linkedin")
+            //social links
+            include includes/header.pug
+            block home_block 
+                include includes/home.pug
+            include includes/footer.pug
+        include includes/scripts.pug

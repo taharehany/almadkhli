@@ -1,0 +1,50 @@
+extend index
+
+block website_title
+    title #{website_title} | careers
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 careers
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") careers
+    //breadcrumb
+
+    //careers
+    section(class="careers")
+        div(class="container")
+            div(class="main-title")
+                h2 we are hiring:
+            div(class="content")
+                div(class="career-box")
+                    div(class="details")
+                        div(class="title")
+                            h3 
+                                a(href="single-career.html") vacancy for Accountant
+                            h3 
+                                a(href="single-career.html") vacancy for administrator
+                //- div(class="career-box")
+                    div(class="details")
+                        div(class="head-part")
+                            div(class="icon")
+                                a(href="") 
+                                    img(src="images/icons/career-icon.png", class="img-fluid" alt="")
+                            div(class="title")
+                                h3 
+                                    a(href="") Accountant offer
+                                a(href="" class="place") 
+                                    i(class="bi bi-globe") 
+                                    | Los Angeles, CA
+                                a(href="" class="time") Full-time 
+                        p The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero"s De Finibus Bonorum et Malorum for use in a type specimen book.
+                        div(class="apply-btn")
+                            a(class="btn hvr-sweep-to-top" href="apply.html") Apply job
+                                i(class="bi bi-arrow-right")
+                            span(class="date") 3 days ago
+    //careers

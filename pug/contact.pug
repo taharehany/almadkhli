@@ -1,0 +1,127 @@
+extend index
+
+block website_title
+   title #{website_title} | contact us
+
+block home_block
+   //breadcrumb
+   nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+      div(class="container")
+         div(class="breadcrumb-title")
+            h2 contact us
+         nav(aria-label="breadcrumb")
+            ol(class="breadcrumb")
+               li(class="breadcrumb-item")
+                  a(href="index.html") Home
+               li(class="breadcrumb-item active" aria-current="page") contact us
+   //breadcrumb
+
+   //contact
+   section(class="contact-area pt-130 pb-80")
+      div(class="container")
+         div(class="row align-items-center")
+            div(class="col-lg-6 info-col")
+               div(class="contact-info-list mb-50")
+                  ul(class="nav nav-pills" id="pills-tab")
+                     li(class="nav-item", role="presentation")
+                        button(id="map-1-tab" class="nav-link active", data-bs-toggle="pill", data-bs-target="#map-1", type="button", role="tab", aria-controls="map-1", aria-selected="true") 
+                           div(class="info-item wow fadeInDown")
+                              div(class="thumb")
+                                 a(href="#map-1") 
+                                    img(src="images/contact/info-1.jpg" alt="Info Thumb")
+                              div(class="content")
+                                 h3 Cairo 
+                                    span(class="sm-title") (Main)
+                                 p
+                                    i(class="bi bi-telephone")
+                                    a(href="tel:+01234556998") +012 (345) 56 998
+                                 p
+                                    i(class="bi bi-envelope")
+                                    a(href="mailto:support@gmail.com") support@gmail.com
+                                 p
+                                    i(class="bi bi-newspaper")
+                                    | fax: 02215420
+                                 p
+                                    i(class="bi bi-map")
+                                    | 59 Main Street, Cairo
+                     li(class="nav-item", role="presentation")
+                        button(id="map-2-tab" class="nav-link", data-bs-toggle="pill", data-bs-target="#map-2", type="button", role="tab", aria-controls="map-2", aria-selected="false") 
+                           div(class="info-item wow fadeInDown")
+                              div(class="thumb")
+                                 a(href="#map-2")
+                                    img(src="images/contact/info-2.jpg" alt="Info Thumb")
+                              div(class="content")
+                                 h3 Mohandseen 
+                                    span(class="sm-title") (Main)
+                                 p
+                                    i(class="bi bi-telephone")
+                                    a(href="tel:+01234556998") +012 (345) 56 998
+                                 p
+                                    i(class="bi bi-envelope")
+                                    a(href="mailto:support@gmail.com") support@gmail.com
+                                 p
+                                    i(class="bi bi-newspaper")
+                                    | fax: 02215420
+                                 p
+                                    i(class="bi bi-map")
+                                    | 59 Main Street, USACairo
+                     li(class="nav-item", role="presentation") 
+                        button(id="map-3-tab" class="nav-link", data-bs-toggle="pill", data-bs-target="#map-3", type="button", role="tab", aria-controls="map-3", aria-selected="false")
+                           div(class="info-item wow fadeInDown")
+                              div(class="thumb")
+                                 a(href="#map-3")
+                                    img(src="images/contact/info-3.jpg" alt="Info Thumb")
+                              div(class="content")
+                                 h3 Alexanderia 
+                                    span(class="sm-title") (Main)
+                                 p
+                                    i(class="bi bi-telephone")
+                                    a(href="tel:+01234556998") +012 (345) 56 998
+                                 p
+                                    i(class="bi bi-envelope")
+                                    a(href="mailto:support@gmail.com") support@gmail.com
+                                 p
+                                    i(class="bi bi-newspaper")
+                                    | fax: 02215420
+                                 p
+                                    i(class="bi bi-map")
+                                    | 59 Main Street, Alexanderia
+            div(class="col-lg-6 form-col")
+               div(class="contact-wrapper-three mb-50 wow fadeInRight" wow-data-delay="3s" style="visibility: visible; animation-name: fadeInRight;")
+                  div(class="section-title mb-30")
+                     h2 Leave a Message
+                     p We’re Ready To Help You
+                  div(class="contact-form")
+                     form
+                        div(class="row")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 input(type="text" class="form-control" placeholder="Full Name" name="name" required="")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 input(type="email" class="form-control" placeholder="Email Address" name="email" required="")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 input(type="number" class="form-control" placeholder="phone" name="phone" required="")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 textarea(class="form-control" placeholder="Write Message" name="message")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 button(class="btn") Send  message
+   //contact
+
+   //map
+   section(class="map-area")
+      div(class="container")
+         div(class="tab-content" id="pills-tabContent")
+            div(id="map-1" class="tab-pane fade show active", role="tabpanel", aria-labelledby="map-1-tab")
+               div(class="map-box fadeInUp")
+                  iframe(src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&t=m&z=18&output=embed&iwloc=near")
+            div(id="map-2" class="tab-pane fade", role="tabpanel", aria-labelledby="map-2-tab")
+               div(class="map-box fadeInUp")
+                  iframe(src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&t=m&z=18&output=embed&iwloc=near")
+            div(id="map-3" class="tab-pane fade", role="tabpanel", aria-labelledby="map-3-tab")
+               div(class="map-box fadeInUp")
+                  iframe(src="https://maps.google.com/maps?q=67%20Shehab%20Street%20%2C%20El%20Mohandseen%2CGiza%20%2C%20Egypt&t=m&z=18&output=embed&iwloc=near")
+   //map

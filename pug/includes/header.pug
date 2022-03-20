@@ -1,0 +1,167 @@
+//header
+header 
+    //navbar desktop
+    nav(class="navbar main-nav navbar-expand-lg")
+        div(class="container-fluid")
+            div(class="navbar-content")
+                div(class="group")
+                    a(class="navbar-brand", area-label="Logo" href="index.html") 
+                        img(src="images/logo-white.png", class="img-fluid" alt ="")
+                    button(class="navbar-toggler", type="button", data-bs-toggle="offcanvas", data-bs-target="#side_menu", aria-controls="side_menu", aria-expanded="false", aria-label="Toggle navigation")
+                        div(class="hamburger-menu")
+                            span
+                            span
+                            span
+                div(class="collapse navbar-collapse" id="navbarNav")
+                    ul(class="navbar-nav")
+                        li(class="nav-item active")
+                            a(class="nav-link", aria-current="page", href="index.html") home
+                        li(class="nav-item")
+                            a(class="nav-link", href="") about us
+                        li(class="nav-item")
+                            a(class="nav-link", href="") our team
+                        li(class="nav-item")
+                            a(class="nav-link", href="") careers
+                        li(class="nav-item")
+                            a(class="nav-link", href="") training
+                        li(class="nav-item")
+                            a(class="nav-link", href="") contact us
+                        li(class="nav-item dropdown")
+                            a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+                                | pages
+                            ul(class="dropdown-menu")
+                                li
+                                    a(class="dropdown-item", href="about.html") about
+                                li
+                                    a(class="dropdown-item", href="apply.html") apply
+                                li
+                                    a(class="dropdown-item", href="careers.html") careers
+                                li
+                                    a(class="dropdown-item", href="contact.html") contact
+                                li
+                                    a(class="dropdown-item", href="expertise.html") expertise
+                                li
+                                    a(class="dropdown-item", href="knowledge.html") knowledge
+                                li
+                                    a(class="dropdown-item", href="privacy-policy.html") privacy policy
+                                li
+                                    a(class="dropdown-item", href="single-blog.html") single blog
+                                li
+                                    a(class="dropdown-item", href="single-expertise.html") single expertise
+                                li
+                                    a(class="dropdown-item", href="team.html") team
+                                li
+                                    a(class="dropdown-item", href="terms.html") terms
+                                li
+                                    a(class="dropdown-item", href="training.html") training
+                                li
+                                    a(class="dropdown-item", href="404.html") 404
+                                li
+                                    a(class="dropdown-item", href="client-portal.html") client portal
+                                li
+                                    a(class="dropdown-item", href="case-details.html") case details
+                        //- li(class="nav-item dropdown")
+                            a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+                                | language
+                            ul(class="dropdown-menu")
+                                li
+                                    a(class="dropdown-item", href="arabic/index.html") arabic
+                                li
+                                    a(class="dropdown-item", href="") english
+                div(class="login")
+                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
+    //navbar desktop
+
+    //side menu in mobile only
+    div(class="offcanvas offcanvas-start", id="side_menu" data-bs-scroll="false", tabindex="-1", aria-labelledby="side_menu_label")
+        div(class="offcanvas-header")
+            button(type="button", class="btn-close btn-close-white", data-bs-dismiss="offcanvas", data-bs-target="#side_menu", aria-controls="side_menu" aria-label="Close")
+        div(class="offcanvas-body")
+            div(class="navbar")
+                div(class="collapsed navbar-collapse" id="navbarNavSide")
+                    ul(class="navbar-nav")
+                        li(class="nav-item active")
+                            a(class="nav-link", aria-current="page", href="index.html") home
+                        li(class="nav-item")
+                            a(class="nav-link", href="about.html") about us
+                        li(class="nav-item")
+                            a(class="nav-link", href="expertise.html") expertise
+                        li(class="nav-item")
+                            a(class="nav-link", href="knowledge.html") our knowledge
+                        li(class="nav-item")
+                            a(class="nav-link", href="team.html") our team
+                        li(class="nav-item")
+                            a(class="nav-link", href="careers.html") careers
+                        li(class="nav-item")
+                            a(class="nav-link", href="training.html") training
+                        li(class="nav-item")
+                            a(class="nav-link", href="contact.html") contact us
+                        li(class="nav-item dropdown")
+                            a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+                                | pages
+                            ul(class="dropdown-menu")
+                                li
+                                    a(class="dropdown-item", href="about.html") about
+                                li
+                                    a(class="dropdown-item", href="apply.html") apply
+                                li
+                                    a(class="dropdown-item", href="careers.html") careers
+                                li
+                                    a(class="dropdown-item", href="contact.html") contact
+                                li
+                                    a(class="dropdown-item", href="expertise.html") expertise
+                                li
+                                    a(class="dropdown-item", href="knowledge.html") knowledge
+                                li
+                                    a(class="dropdown-item", href="privacy-policy.html") privacy policy
+                                li
+                                    a(class="dropdown-item", href="single-blog.html") single blog
+                                li
+                                    a(class="dropdown-item", href="single-expertise.html") single expertise
+                                li
+                                    a(class="dropdown-item", href="team.html") team
+                                li
+                                    a(class="dropdown-item", href="terms.html") terms
+                                li
+                                    a(class="dropdown-item", href="training.html") training
+                                li
+                                    a(class="dropdown-item", href="404.html") 404
+                                li
+                                    a(class="dropdown-item", href="client-portal.html") client portal
+                                li
+                                    a(class="dropdown-item", href="case-details.html") case details
+                div(class="login-side")
+                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
+//header
+
+//login modal
+div(class="modals")
+    div(class="modal login-modal fade", id="loginModal" tabindex="-1", aria-labelledby="loginModalLabel", aria-hidden="true")
+        div(class="modal-dialog")
+            div(class="modal-content")
+                div(class="modal-header")
+                    h5(class="modal-title" id="loginModalLabel") login
+                    button(type="button", class="btn-close btn-close-white", data-bs-dismiss="modal", aria-label="Close")
+                div(class="modal-body")
+                    form(class="g-3 needs-validation" action="" novalidate)
+                        div(class="row")
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    div(class="input-group has-validation")
+                                        i(class="input-group-text bi bi-envelope")
+                                        input(type="email" class="form-control" placeholder="Email" required)
+                                        div(class="invalid-tooltip")
+                                            | email error
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    i(class="input-group-text bi bi-shield-lock")
+                                    input(type="password" class="form-control" placeholder="Password" required)
+                            div(class="col-lg-12 mb-2")
+                                div(class="form-check")
+                                    input(input class="form-check-input" type="checkbox" id="loginRem")
+                                    label(class="form-check-label", for="loginRem")
+                                        | Remember me
+                            div(class="col-lg-12")
+                                div(class="form-group btns")
+                                    button(class="btn btn-danger" type="submit") login now
+//login modal

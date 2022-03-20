@@ -1,0 +1,47 @@
+extend index
+
+block website_title
+    title #{website_title} | training
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 training
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") training
+    //breadcrumb
+    
+    //training
+    section(class="training")
+        div(class="container")
+            div(class="content")
+                div(class="training-box")
+                    div(class="row")
+                        div(class="col-lg-5 p-0")
+                            div(class="image")
+                                img(src="images/training/01.jpg", class="img-fluid" alt="")
+                        div(class="col-lg-7 p-0")
+                            div(class="details")
+                                div(class="title")
+                                    h3 this is training title
+                                div(class="text")
+                                    p Dr. Aly Yassien was graduated from faculty of Law  Cairo University at (1982-1983 ). Since then and after he has committed all his attitude to be more updated with the international laws and legal studies concerning important topics, so he sought to obtain post-graduate degrees as A Diploma of international commercial law “the mechanism of the WTO” (kings college – London University), Ph.D. at international arbitration commercial law ( Holborn college – London ), LLM degree in Maritime transport and logistics “Arab academy for science, technology, and maritime transport, a Predoctoral researcher in investment dispute settlement mechanism.
+                                    a(href="training-apply.html" class="btn") submit now
+                div(class="training-box")
+                    div(class="row")
+                        div(class="col-lg-5 p-0")
+                            div(class="image")
+                                img(src="images/training/02.jpg", class="img-fluid" alt="")
+                        div(class="col-lg-7 p-0")
+                            div(class="details")
+                                div(class="title")
+                                    h3 this is Moot court
+                                div(class="text")
+                                    p Dr. Aly Yassien was graduated from faculty of Law  Cairo University at (1982-1983 ). Since then and after he has committed all his attitude to be more updated with the international laws and legal studies concerning important topics, so he sought to obtain post-graduate degrees as A Diploma of international commercial law “the mechanism of the WTO” (kings college – London University), Ph.D. at international arbitration commercial law ( Holborn college – London ), LLM degree in Maritime transport and logistics “Arab academy for science, technology, and maritime transport, a Predoctoral researcher in investment dispute settlement mechanism.
+                                    a(href="training-apply.html" class="btn") submit now
+    //training

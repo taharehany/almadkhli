@@ -1,0 +1,97 @@
+extend index
+
+block website_title
+    title #{website_title} | single expertise
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 single expertise
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") single expertise
+    //breadcrumb
+    
+    //single expertise page
+    section(class="single-expertise")
+        div(class="container")
+            div(class="main-title")
+                h2 our expertise
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-9")
+                        div(class="nav-expertise")
+                            ul(class="nav nav-pills", role="tablist")
+                                li(class="nav-item", role="presentation")
+                                    button(class="nav-link active", id="expertise-1-tab" data-bs-toggle="pill", data-bs-target="#expertise-1", type="button", role="tab", aria-controls="expertise-1", aria-selected="true") History
+                                li(class="nav-item", role="presentation")
+                                    button(class="nav-link", id="expertise-2-tab" data-bs-toggle="pill", data-bs-target="#expertise-2", type="button", role="tab", aria-controls="expertise-2", aria-selected="false") vision
+                                li(class="nav-item", role="presentation")
+                                    button(class="nav-link", id="expertise-3-tab" data-bs-toggle="pill", data-bs-target="#expertise-3", type="button", role="tab", aria-controls="expertise-3", aria-selected="false") mission
+                            div(class="tab-content")
+                                div(class="tab-pane fade show active", id="expertise-1" role="tabpanel", aria-labelledby="expertise-1-tab") 
+                                    h3 overview
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    h3 this is title
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                div(class="tab-pane fade", id="expertise-2" role="tabpanel", aria-labelledby="expertise-2-tab") 
+                                    h3 overview
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                    h3 this is title
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                                div(class="tab-pane fade", id="expertise-3" role="tabpanel", aria-labelledby="expertise-3-tab") 
+                                    h3 Loyalty
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit?
+                                    h3 Collaboration
+                                    p Lorem ipsum dolor sit, amet  voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit?
+                                    h3 Excellence
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore
+                                    h3 Innovative
+                                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore
+                    div(class="col-lg-3") 
+                        div(class="side-widget")
+                            div(class="person")
+                                div(class="image")
+                                    a(href="#!") 
+                                        img(data-src="images/team/01.jpg", class="img-fluid" alt="")
+                                div(class="title")
+                                    h4 Brayan Olson
+                                    p(class="pos") Senior Associate
+                                a(class="btn", href="#!") more
+                                    i(class="bi bi-chevron-right")
+                            div(class="other-expertise")
+                                div(class="title")
+                                    h4 All Expertise
+                                ul 
+                                    li 
+                                        a(href="#!" class="active") this is title Expertise 01
+                                    li 
+                                        a(href="#!") this is title Expertise 02
+                                    li 
+                                        a(href="#!") this is title Expertise 03
+                                    li 
+                                        a(href="#!") this is title Expertise 04
+    //single expertise page
+    
+    //clients
+    //- section(class="clients")
+        div(class="container")
+            div(class="main-title")
+                h2 our clients
+            div(class="content")
+                div(class="clients-carousel owl-carousel owl-theme")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/01.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/02.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/03.png" alt="")
+    //clients

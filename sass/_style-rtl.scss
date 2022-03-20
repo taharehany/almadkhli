@@ -1,0 +1,317 @@
+/** rtl styles **/
+html[dir=rtl] {
+    body {
+        font-family: 'El Messiri', sans-serif;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+        float: right;
+        padding-left: 5px
+    }
+
+    header {
+        .navbar {
+            .lang {
+                .lang-content {
+                    text-align: right;
+                }
+            }
+
+            .dropdown-toggle {
+                &::before {
+                    right: auto;
+                    left: 0
+                }
+            }
+
+            .navbar-nav {
+                .nav-link {
+                    &::before {
+                        right: auto;
+                        left: 0;
+                    }
+                }
+
+                .nav-item {
+                    .dropdown-menu {
+                        li {
+                            text-align: initial;
+                        }
+                    }
+                }
+            }
+        }
+
+        .offcanvas {
+            .navbar .navbar-nav .nav-item .dropdown-toggle::after {
+                left: 0;
+                right: auto
+            }
+
+            .offcanvas-header {
+                justify-content: flex-start;
+            }
+        }
+
+        .top-part {
+
+            .consultant-modal {
+                .form-control {
+                    @include borderRadius(5px 0 0 5px !important);
+                }
+
+                .input-group.has-validation>.dropdown-toggle:nth-last-child(n+4),
+                .input-group.has-validation> :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu),
+                .input-group:not(.has-validation)>.dropdown-toggle:nth-last-child(n+3),
+                .input-group:not(.has-validation)> :not(:last-child):not(.dropdown-toggle):not(.dropdown-menu) {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                    @include borderRadius(0 5px 5px 0 !important);
+                }
+            }
+        }
+    }
+
+    section.main-slider {
+        .slider-item {
+            .item-details {
+                .item-text {
+                    direction: rtl;
+                }
+            }
+        }
+    }
+
+    section.why-us {
+        .content {
+            .why-box {
+                direction: rtl;
+            }
+        }
+    }
+
+    section.blogs .content .blogs-box .details,
+    section.blogs-in-page .content .blogs-box .details {
+        direction: rtl;
+    }
+
+    section.about-in-page .content .text ul li::before {
+        right: 0;
+        left: auto;
+    }
+
+    section.about-in-page .content .box:nth-child(even) {
+        .text {
+            direction: rtl;
+        }
+    }
+
+    section.services-in-page .content .nav .nav-link.active::before {
+        left: -30px;
+        right: auto;
+        border-width: 30px 30px 30px 0;
+        border-color: transparent $main_color transparent transparent;
+    }
+
+    .form-select {
+        background-position: left .75rem center;
+    }
+
+    section.services .content .service-box .details,
+    section.services .single-blog .content .blog-box .details,
+    .single-blog section.services .content .blog-box .details,
+    section.single-service .content .service-box .details,
+    section.single-service .single-blog .content .blog-box .details,
+    .single-blog section.single-service .content .blog-box .details,
+    section.single-blog .content .service-box .details,
+    section.single-blog .content .blog-box .details,
+    section.services-in-page .content .service-box .details,
+    section.services-in-page .single-blog .content .blog-box .details,
+    .single-blog section.services-in-page .content .blog-box .details {
+        right: 0;
+        left: auto;
+
+        &::before {
+            right: -2px;
+            left: auto;
+        }
+    }
+
+    .form-control.is-invalid,
+    .was-validated .form-control:invalid {
+        padding-left: calc(1.5em + .75rem);
+        background-position: left calc(.375em + .1875rem) center;
+    }
+
+    .form-control.is-valid,
+    .was-validated .form-control:valid {
+        padding-left: calc(1.5em + .75rem);
+        background-position: left calc(.375em + .1875rem) center;
+    }
+
+    .dropdown-toggle {
+        &::after {
+            margin-left: 0;
+            margin-right: .255em;
+        }
+    }
+
+    .form-check {
+        padding-left: 0;
+        padding-right: 1.5em;
+    }
+
+    .form-check .form-check-input {
+        float: right;
+        margin-right: -1.5em;
+        margin-left: 0;
+    }
+
+    .form-control {
+
+        &[type="number"],
+        &[type="email"] {
+            direction: rtl !important;
+        }
+    }
+
+    .alert-dismissible {
+        padding-left: 3rem;
+        padding-right: 10px
+    }
+
+    .alert-dismissible .btn-close {
+        right: auto;
+        left: 0
+    }
+
+    .accordion-button::after {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    section.contact-in-page .main-title h2::after {
+        left: auto;
+        right: 0;
+    }
+
+    .side-widget .other-services .title h4::after,
+    .side-widget .single-blog .content .other-blogs .title h4::after,
+    .single-blog .content .side-widget .other-blogs .title h4::after,
+    .side-widget .side-contact .title h4::after {
+        right: 0;
+        left: auto;
+    }
+
+    .side-widget .other-services ul li a::before,
+    .side-widget .single-blog .content .other-blogs ul li a::before,
+    .single-blog .content .side-widget .other-blogs ul li a::before {
+        right: 0;
+        left: auto;
+        @include transform(rotate(180deg) translateY(50%))
+    }
+
+    .bi.bi-chevron-double-right,
+    .bi.bi-arrow-right {
+        &::before {
+            @include transform(rotate(180deg))
+        }
+    }
+
+    section.about-in-page {
+        .content {
+            .row {
+                &:nth-child(even) {
+                    direction: ltr;
+
+                    .text {
+                        direction: rtl;
+                    }
+                }
+            }
+        }
+    }
+
+    section.counter-numbers .content .counter-boxs .col::before {
+        right: 0;
+        left: auto
+    }
+    section.news .content .news-box {
+        direction: rtl
+    }
+    [class^=bi-]::before, [class*=" bi-"]::before {
+        vertical-align: middle;
+    }
+    section.single-blog .content .single-blog-box .comments-list .comment-item .comment-body span {
+        left: 0;
+        right: auto;
+    }
+    section.single-expertise .content .nav .nav-item .nav-link::before {
+        right: 0;
+        left: auto;
+    }
+    .modal .more-info .content .contact h4::after, .modal .team .content .head-team-box .details .text h4::after, section.training .content .training-box .details .title h3::after {
+        right: 0;
+        left: auto;
+    }
+    .modal .more-info .content .accordion .accordion-item .accordion-button::after {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    .modal-header .btn-close {
+        margin-left: 0;
+    }
+    section.training .content .training-box .details .text {
+        background-position: bottom left;
+    }
+    section.about .just, section.about-in-page .just {
+        right: auto;
+        left: 0;
+    }
+    section.knowledge .content .nav .nav-item .nav-link::before {
+        right: 15px;
+        left: auto;
+    }
+    section.knowledge .content .nav {
+        padding: 0;
+    }
+    footer {
+        .footer-content {
+            .footer-box {
+                .contact {
+                    ul {
+                        li {
+                            padding-left: 0;
+                            padding-right: 40px;
+
+                            i {
+                                right: 0;
+                                left: auto
+                            }
+                        }
+                    }
+                }
+
+                .map-links {
+                    li {
+                        padding-left: 0;
+                        padding-right: 20px;
+
+                        &::before {
+                            right: 0;
+                            left: auto;
+                            @include transform(rotate(180deg) translateY(50%));
+                        }
+                    }
+                }
+
+                h3::before {
+                    right: 0;
+                    left: auto;
+                }
+            }
+        }
+    }
+}
+
+/** rtl styles **/

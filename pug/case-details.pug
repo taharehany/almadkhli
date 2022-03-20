@@ -1,0 +1,72 @@
+extend index
+
+block website_title
+    title #{website_title} | case details
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 welcome, client name
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active" aria-current="page") case details
+    //breadcrumb
+
+    //case details
+    section(class="client-portal")
+        div(class="container")
+            div(class="content")
+                div(class="nav nav-pills", id="profile_portal_tabs" role="tablist", aria-orientation="vertical")
+                    button#client-portal-3-tab(class="nav-link active", data-bs-toggle="pill", data-bs-target="#client-portal-3", type="button", role="tab", aria-controls="client-portal-3", aria-selected="false") case details
+                    button(class="nav-link", id="client-portal-1-tab" data-bs-toggle="pill", data-bs-target="#client-portal-1", type="button", role="tab", aria-controls="client-portal-1", aria-selected="false") upload files
+                form(class="g-3" action="" novalidate)
+                    div(class="tab-content" id="profile_tabsContent")
+                        div(class="tab-pane fade show active", id="client-portal-3" role="tabpanel", aria-labelledby="client-portal-3-tab") 
+                            div(class="table-area")
+                                div(class="table-responsive")
+                                    table(class="table table-hover")
+                                        thead
+                                            tr
+                                                th subject name
+                                                th type
+                                                th brief
+                                                th case files
+                                                th status
+                                        tbody
+                                            tr
+                                                td An example alert with an icon
+                                                td(nowrap="nowrap") text here
+                                                td Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo facere, illum possimus, vero velit officia molestiae blanditiis quo vel eaque id adipisci harum, dolor ipsum deserunt sed aut cum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea illo facere, illum possimus, vero velit officia molestiae blanditiis quo vel eaque id adipisci harum, dolor ipsum deserunt sed aut cum? Lorem ipsum dolor sit amet
+                                                td
+                                                    a(href="" class="case-files") 
+                                                        i(class="bi bi-file-pdf")
+                                                    a(href="" class="case-files") 
+                                                        i(class="bi bi-file-pdf")
+                                                td(nowrap="nowrap") text here
+                        div(class="tab-pane fade", id="client-portal-1" role="tabpanel", aria-labelledby="client-portal-1-tab") 
+                            div(class="row")
+                                div(class="col-lg-12")
+                                    h3(class="subtitle") upload file
+                                    div(class="alert alert-warning alert-dismissible fade show", role="alert")
+                                        strong Holy guacamole!
+                                        | You should check in on some of those fields below.
+                                        button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                                div(class="col-lg-12")
+                                    div(class="form-group")
+                                        select(class="form-select")
+                                            option(selected disabled) document type  
+                                            option(value="") 1
+                                            option(value="") 1
+                                            option(value="") 1
+                                            option(value="") 1
+                                            option(value="") 1
+                                    div(class="form-group")
+                                        input(type="file" class="form-control")
+                                div(class="col-lg-12")
+                                    div(class="form-group")
+                                        button(class="btn btn-danger hvr-sweep-to-top" type="submit") save changes
+    //case details
