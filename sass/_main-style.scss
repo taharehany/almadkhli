@@ -1001,6 +1001,9 @@ section.video {
 			background-color: $dark_color;
 			@include borderRadius(50%);
 			@extend %center;
+			z-index: 9;
+			outline: 1px solid $dark_color;
+			outline-offset: 7px;
 
 			&::before,
 			&::after {
