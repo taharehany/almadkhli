@@ -1155,35 +1155,38 @@ section.services {
 			border-color: #fff;
 			border-style: solid;
 
-			&:nth-child(1) {
+			&:nth-child(1),&:nth-child(7)  {
 				border-width: 0;
 				border-bottom-width: 1px;
 			}
-			&:nth-child(2) {
+			&:nth-child(2),&:nth-child(8) {
 				border-width: 1px;
 				border-top: 0;
 			}
-			&:nth-child(3) {
+			&:nth-child(3),&:nth-child(9) {
 				border-width: 0;
 				border-bottom-width: 1px;
 			}
-			&:nth-child(4) {
+			&:nth-child(4),&:nth-child(10) {
 				border-width: 0;
 			}
-			&:nth-child(5) {
+			&:nth-child(5),&:nth-child(11) {
 				border-width: 1px;
 				border-top: 0;
-				border-bottom: 0;
+				border-bottom-width: 0;
 			}
-			&:nth-child(6) {
+			&:nth-child(6),&:nth-child(12) {
 				border-width: 0;
+			}
+			&:nth-child(4), &:nth-child(5), &:nth-child(6) {
+				border-bottom-width: 1px !important;
 			}
 		}
 
 		.box {
 			position: relative;
 			overflow: hidden;
-			height: 400px;
+			height: 250px;
 			display: -ms-flexbox;
 			display: flex;
 			-ms-flex-pack: end;
