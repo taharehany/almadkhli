@@ -1682,6 +1682,7 @@ section.blogs {
 						text-transform: capitalize;
 						@extend %max_lines;
 						-webkit-line-clamp: 3;
+						@include transition(all ease 0.3s);
 					}
 				}
 
