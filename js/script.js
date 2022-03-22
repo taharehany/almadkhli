@@ -13,7 +13,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
     let scroll = $(window).scrollTop();
     let scrollBottom = $('footer').offset().top;
-    
+
     if ((scrollBottom - scroll) < $('footer').height()) {
       $(".fixed-social-links").fadeOut()
     } else {
@@ -208,30 +208,28 @@ $(document).ready(function () {
       })
   })();
 
-  //store theme colors in local storage 
-  if (!localStorage.getItem("main_color")) {
-    $(":root").css("--main-color", "rgb(192, 159, 31)"); //#C09F1F 
-  } else {
-    $(":root").css("--main-color", localStorage.getItem("main_color"));
-  }
-
-  if (!localStorage.getItem("second_color")) {
-    $(":root").css("--second-color", "rgb(11, 25, 66)"); //#0B1942
-  } else {
-    $(":root").css("--second-color", localStorage.getItem("second_color"));
-  }
-
-  if (!localStorage.getItem("dark_color")) {
-    $(":root").css("--dark-color", "#0C0D0E");
-  } else {
-    $(":root").css("--dark-color", localStorage.getItem("dark_color"));
-  }
-
   //lazyload images
   $("img").Lazy({
     scrollDirection: "vertical",
     effect: "fadeIn",
     visibleOnly: false,
+  });
+
+  //services change bg on hover
+  $(".services .col-box").mouseenter(function () {
+    let boxTarget = $(this).data('target');
+    let bgBox = $(`*[data-index="${boxTarget}"]`);
+    let allBgBoxs = $(".serv-bg");
+
+    allBgBoxs.css({"background-image": "none", "opacity": 0});
+    bgBox.css({"background-image": `url(${$(this).data('src')})`, "opacity": 1});
+  });
+
+  $(".services .serv-backgrounds").mouseleave(function () {
+    let boxTarget = $(".services .col-box").data('target', '1');
+    let bgBox = $(".serv-bg").data('index', '1');
+
+    bgBox.css({"background-image": `url(${$(boxTarget).data('src')})`, "opacity": 1});
   });
 });
 
