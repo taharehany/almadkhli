@@ -81,7 +81,7 @@ header {
 			top: 0;
 			background-color: $main_color;
 			box-shadow: 0 10px 30px 0px rgb(0 0 0 / 8%);
-			border-bottom: 1px solid #ffffff1a;
+			// border-bottom: 1px solid #ffffff1a;
 		}
 	}
 
@@ -91,7 +91,7 @@ header {
 		top: 0;
 		width: 100%;
 		@include transition(top linear 0.2s);
-		border-bottom: 1px solid #ffffff1a;
+		// border-bottom: 1px solid #ffffff1a;
 
 		.navbar-content {
 			// background-color: $second_color;
@@ -219,7 +219,7 @@ header {
 
 		.navbar-collapse {
 			justify-content: center;
-			border-inline-end: 1px solid #ffffff1a;
+			// border-inline-end: 1px solid #ffffff1a;
 		}
 
 		.dropdown-toggle {
@@ -451,7 +451,7 @@ header {
 			font-weight: 500;
 			border-radius: 0px;
 			border: none;
-			border-inline-end: 3px solid $main_color;
+			// border-inline-end: 3px solid $main_color;
 			// background-color: #fff;
 			text-transform: capitalize;
 			white-space: nowrap;
@@ -1190,7 +1190,7 @@ section.services {
 			display: -ms-flexbox;
 			display: flex;
 			-ms-flex-pack: end;
-			justify-content: flex-end;
+			justify-content: start;
 			-ms-flex-align: end;
 			align-items: flex-end;
 			padding: 2.1875rem;
