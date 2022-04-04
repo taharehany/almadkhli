@@ -4,8 +4,10 @@ block website_title
     title #{website_title} | our team
 
 block home_block
-    //breadcrumb
+    breadcrumb
     nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/broad.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
         div(class="container")
             div(class="breadcrumb-title")
                 h2 our team
@@ -16,104 +18,119 @@ block home_block
                     li(class="breadcrumb-item active", aria-current="page") our team
     //breadcrumb
 
-    //team page team
+    //team
     section(class="team")
         div(class="container")
+            div(class="main-title")
+                h2 our team
             div(class="content")
-                div(class="head-team-box")
-                    div(class="row")
-                        div(class="col-lg-3 col-md-4 px-0")
-                            div(class="image")
-                                img(src="images/team/head.jpg", class="img-fluid" alt="")
-                        div(class="col-lg-9 col-md-8 px-0")
-                            div(class="details")
-                                div(class="title")
-                                    h3 DR. ALI YASSIEN
-                                    span Founder & Chairman
-                                    p Former Judge & vice-president of the appellate court
-                                div(class="text")
-                                    p Dr. Aly Yassien was graduated from faculty of Law  Cairo University at (1982-1983 ). Since then and after he has committed all his attitude to be more updated with the international laws and legal studies concerning important topics, so he sought to obtain post-graduate degrees as A Diploma of international commercial law “the mechanism of the WTO” (kings college – London University), Ph.D. at international arbitration commercial law ( Holborn college – London ), LLM degree in Maritime transport and logistics “Arab academy for science, technology, and maritime transport, a Predoctoral researcher in investment dispute settlement mechanism.
-                                    a(href="single-team.html" class="btn") read more 
-    //team page team
-
-    //team members
-    section(class="team")
-        div(class="container")
-            div(class="content")
-                div(class="search-name")
-                    h3(class="title") search by name:
-                    div(class="letters")
-                        a(href="") A 
-                        a(href="") B 
-                        a(href="") C 
-                        a(href="") D 
-                        a(href="") E 
-                        a(href="") F 
-                        a(href="") G 
-                        a(href="") H 
-                        a(href="") I 
-                        a(href="") J 
-                        a(href="") K 
-                        a(href="") L 
-                        a(href="") M 
-                        a(href="") N 
-                        a(href="") O 
-                        a(href="") P 
-                        a(href="") Q 
-                        a(href="") R 
-                        a(href="") S 
-                        a(href="") T 
-                        a(href="") U 
-                        a(href="") V 
-                        a(href="") W 
-                        a(href="") X 
-                        a(href="") Y 
-                        a(href="") Z
-                div(class="filter-part")
-                    h3(class="title") find a lawyer
-                    form(action="" method="") 
-                        div(class="row")
-                            div(class="col-lg-4 col-md-6")
-                                div(class="form-group")
-                                    input(type="text" class="form-control" placeholder="Name")
-                            div(class="col-lg-4 col-md-6")
-                                div(class="form-group")
-                                    select(class="form-select select2")
-                                        option(disabled, selected, class="hidden-option") practice area
-                                        option(value="1") option 1
-                                        option(value="2") option 2
-                                        option(value="3") option 3
-                                        option(value="4") option 4
-                            div(class="col-lg-4 col-md-6")
-                                div(class="form-group")
-                                    select(class="form-select select2")
-                                        option(disabled, selected, class="hidden-option") position
-                                        option(value="1") option 1
-                                        option(value="2") option 2
-                                        option(value="3") option 3
-                                        option(value="4") option 4
                 div(class="row")
-                    div(class="col-lg-3 col-md-4 col-sm-6")
+                    div(class="col-lg-3 col-md-6")
                         div(class="team-box")
                             div(class="image")
-                                a(href="single-team.html") 
-                                    img(src="images/team/01.jpg", class="img-fluid" alt="")
+                                img(src="images/team/01.jpg" class="img-fluid" alt="")
+                                div(class="social")
+                                    a(href="" aria-label="facebook") 
+                                        i(class="bi bi-facebook") 
+                                    a(href="" aria-label="twitter") 
+                                        i(class="bi bi-twitter") 
+                                    a(href="" aria-label="linkedin") 
+                                        i(class="bi bi-linkedin") 
+                                    a(href="" aria-label="instagram") 
+                                        i(class="bi bi-instagram") 
                             div(class="details")
                                 div(class="title")
-                                    h3 Brayan Olson
-                                    p Senior Associate (Corporate Department) 
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+                    div(class="col-lg-3 col-md-6")
+                        div(class="team-box")
+                            div(class="image")
+                                img(src="images/team/02.jpg" class="img-fluid" alt="")
                                 div(class="social")
-                                    a(href="") 
+                                    a(href="" aria-label="facebook") 
                                         i(class="bi bi-facebook") 
-                                    a(href="") 
+                                    a(href="" aria-label="twitter") 
                                         i(class="bi bi-twitter") 
-                                    a(href="") 
+                                    a(href="" aria-label="linkedin") 
                                         i(class="bi bi-linkedin") 
-                                    a(href="") 
+                                    a(href="" aria-label="instagram") 
                                         i(class="bi bi-instagram") 
-                //if not find any results
-                //- div(class="notfound-txt")
-                    h3 Oops!
-                    h4
-                        strong Your search did not match any results.
-    //team members
+                            div(class="details")
+                                div(class="title")
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+                    div(class="col-lg-3 col-md-6")
+                        div(class="team-box")
+                            div(class="image")
+                                img(src="images/team/03.jpg" class="img-fluid" alt="")
+                                div(class="social")
+                                    a(href="" aria-label="facebook") 
+                                        i(class="bi bi-facebook") 
+                                    a(href="" aria-label="twitter") 
+                                        i(class="bi bi-twitter") 
+                                    a(href="" aria-label="linkedin") 
+                                        i(class="bi bi-linkedin") 
+                                    a(href="" aria-label="instagram") 
+                                        i(class="bi bi-instagram") 
+                            div(class="details")
+                                div(class="title")
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+                    div(class="col-lg-3 col-md-6")
+                        div(class="team-box")
+                            div(class="image")
+                                img(src="images/team/01.jpg" class="img-fluid" alt="")
+                                div(class="social")
+                                    a(href="" aria-label="facebook") 
+                                        i(class="bi bi-facebook") 
+                                    a(href="" aria-label="twitter") 
+                                        i(class="bi bi-twitter") 
+                                    a(href="" aria-label="linkedin") 
+                                        i(class="bi bi-linkedin") 
+                                    a(href="" aria-label="instagram") 
+                                        i(class="bi bi-instagram") 
+                            div(class="details")
+                                div(class="title")
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+                    div(class="col-lg-3 col-md-6")
+                        div(class="team-box")
+                            div(class="image")
+                                img(src="images/team/03.jpg" class="img-fluid" alt="")
+                                div(class="social")
+                                    a(href="" aria-label="facebook") 
+                                        i(class="bi bi-facebook") 
+                                    a(href="" aria-label="twitter") 
+                                        i(class="bi bi-twitter") 
+                                    a(href="" aria-label="linkedin") 
+                                        i(class="bi bi-linkedin") 
+                                    a(href="" aria-label="instagram") 
+                                        i(class="bi bi-instagram") 
+                            div(class="details")
+                                div(class="title")
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+                    div(class="col-lg-3 col-md-6")
+                        div(class="team-box")
+                            div(class="image")
+                                img(src="images/team/01.jpg" class="img-fluid" alt="")
+                                div(class="social")
+                                    a(href="" aria-label="facebook") 
+                                        i(class="bi bi-facebook") 
+                                    a(href="" aria-label="twitter") 
+                                        i(class="bi bi-twitter") 
+                                    a(href="" aria-label="linkedin") 
+                                        i(class="bi bi-linkedin") 
+                                    a(href="" aria-label="instagram") 
+                                        i(class="bi bi-instagram") 
+                            div(class="details")
+                                div(class="title")
+                                    a(href="single-team.html") 
+                                        h3 Brayan Olson
+                                    p Senior Associate 
+    //team

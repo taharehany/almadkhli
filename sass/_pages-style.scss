@@ -117,7 +117,7 @@
 }
 
 .side-widget {
-    .other-expertise {
+    .other-services {
         padding: 20px;
         background: #F4F5F8;
         @include borderRadius(7px);
@@ -491,8 +491,153 @@ section.about-in-page {
 
 //about page
 
-//single expertise page
-section.single-expertise {
+
+//services page
+section.services-page {
+    padding: $padding_section;
+    position: relative;
+
+    .content {
+        .service-box {
+            padding: 25px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: 25px;
+            @include transition(all ease 0.3s);
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                opacity: 1;
+                height: 100%;
+                @include transform(translate3d(0, 0, 0));
+                @include transition(all 0.35s);
+                background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(52, 52, 52, 0)), to(rgba(16, 39, 212, 0.5)));
+                background-image: -o-linear-gradient(top, rgba(52, 52, 52, 0), rgba(16, 39, 212, 0.5));
+                background-image: linear-gradient(to bottom, rgba(52, 52, 52, 0), rgba(16, 39, 212, 0.5));
+                z-index: -1;
+            }
+
+            &:hover {
+                .icon {
+                    opacity: 0;
+                }
+
+                .title {
+                    opacity: 1;
+                    h3 {
+                        color: $second_color;
+                    }
+                }
+
+                .more {
+                    opacity: 1;
+                    @include transform(scale(1, 1));
+                }
+
+                .image {
+                    img {
+                        // @include transform(scale(1.25));
+                        filter: grayscale(0%);
+                    }
+                }
+                .details {
+                    z-index: 1;
+                    &::after {
+                        top: 0;
+                        opacity: 1;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            .image {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+                overflow: hidden;
+
+                img {
+                    @extend %fitimage;
+                    @include transition(all ease 2s);
+                    // filter: grayscale(100%)
+                }
+            }
+
+            .details {
+                position: relative;
+                padding: 15px;
+                // overflow: hidden;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    opacity: 0;
+                    @include transition(all ease 0.5s);
+                }
+            }
+
+            .title {
+                @extend %max_lines;
+                -webkit-line-clamp: 2;
+                @include transition(all ease 0.3s);
+
+                h3 {
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 1.6;
+                }
+            }
+
+            .more {
+                @include transform(scale(0));
+                @include transition(all ease 0.3s);
+                width: 100%;
+                text-align: end;
+
+                &:hover {
+                    i {
+                        background-color: $main_color;
+                        color: #fff
+                    }
+                }
+
+                i {
+
+                    @include transition(all ease 0.3s);
+                    width: 45px;
+                    height: 45px;
+                    @include borderRadius(50%);
+                    background-color: $second_color;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+//services page
+
+//single service page
+section.single-service {
     padding: $padding_section;
 
     .main-title {
@@ -506,7 +651,7 @@ section.single-expertise {
     }
 
     .content {
-        .nav-expertise {
+        .nav-services {
             display: flex;
             // align-items: center;
         }
@@ -566,101 +711,7 @@ section.single-expertise {
     }
 }
 
-//single expertise page
-
-//single expertise page2
-section.single-expertise2 {
-    padding: $padding_section;
-    background: url(../images/bgs/expertise-bg.jpg);
-    background-position: center;
-    background-size: cover;
-
-    .main-title {
-        h2 {
-            font-size: 60px;
-        }
-    }
-
-    .content {
-        .accordion {
-            max-width: 770px;
-
-            .accordion-item {
-                margin-bottom: 15px;
-                @include borderRadius(35px);
-                overflow: hidden;
-
-                .accordion-button {
-                    padding: 30px 35px;
-                    font-weight: 600;
-
-                    &:focus,
-                    &.collapsed {
-                        box-shadow: none;
-                        color: $second_color;
-                    }
-
-                    &::after {
-                        margin-right: 0;
-                    }
-
-                    i {
-                        margin-inline-end: 10px;
-                        color: $main_color;
-                    }
-                }
-
-                .accordion-body {
-                    padding: 25px 35px;
-                }
-            }
-        }
-    }
-}
-
-//single expertise page2
-
-//single service
-section.single-service {
-    background-color: rgb(134 211 243 / 10%);
-    padding: $padding_section;
-
-    .main-title {
-        h2 {
-            text-align: initial;
-        }
-    }
-
-    .content {
-        .service-box {
-            padding-inline-start: 0;
-            @include boxshadow(none);
-            background-color: #fff;
-            text-align: center;
-            padding: 15px;
-
-            .image {
-                img {
-                    height: auto;
-                    max-height: 500px;
-                    @extend %fitimage;
-                }
-            }
-
-            .details {
-                background-color: #fff;
-                padding: 25px 15px;
-
-                p {
-                    color: $gray;
-                    font-size: 14px;
-                }
-            }
-        }
-    }
-}
-
-//single service
+//single service page
 
 //global knowledge
 .knowledge-box {
@@ -1165,269 +1216,6 @@ section.knowledge {
         }
     }
 }
-
-//single blog
-
-//team
-// section.team {
-//     padding: $padding_section;
-//     background-color: #F6F6F6;
-
-//     .main-title {
-//         // text-align: center;
-
-//         .top-title {
-//             justify-content: center;
-//         }
-//     }
-
-//     .content {
-//         .search-name {
-//             margin-bottom: 30px;
-
-//             .title {
-//                 color: $second_color;
-//                 font-size: 20px;
-//                 text-transform: uppercase;
-//                 margin-bottom: 20px;
-//             }
-
-//             .letters {
-//                 display: flex;
-//                 flex-wrap: wrap;
-
-//                 a {
-//                     color: $main_color;
-//                     width: calc(100% / 26);
-//                     font-size: 20px;
-//                     text-transform: uppercase;
-
-//                     &:hover {
-//                         color: $second_color;
-//                     }
-//                 }
-//             }
-//         }
-
-//         .filter-part {
-//             margin-bottom: 30px;
-//             padding: 30px;
-//             background: $second_color;
-//             position: relative;
-//             z-index: 1;
-
-//             .title {
-//                 color: #fff;
-//                 text-transform: uppercase;
-//                 margin-bottom: 20px;
-//                 font-size: 24px;
-//             }
-
-//             .form-group {
-//                 .form-control {
-//                     border: 1px solid #ddd;
-//                     @include borderRadius(0);
-//                     padding: 7px 15px;
-//                     padding: 7px 15px;
-
-//                     &:focus {
-//                         box-shadow: none;
-//                     }
-//                 }
-
-//                 .form-select {
-//                     @include borderRadius(0);
-//                     padding: 7px 15px;
-
-//                     &:focus {
-//                         box-shadow: none;
-//                     }
-//                 }
-//             }
-
-//             .buttons-area {
-//                 text-align: initial;
-
-//                 .btn {
-//                     background-color: $main_color;
-//                     color: #fff;
-//                     padding: 8px 25px;
-//                     @include borderRadius(0);
-//                     width: 100%;
-
-//                     i {
-//                         margin-inline-end: 5px;
-//                         margin-inline-start: 5px;
-//                         font-size: 14px;
-//                     }
-
-//                     &.reset {
-//                         background-color: transparent;
-//                         border: 1px solid #e0e0e0;
-//                         color: #000;
-//                     }
-//                 }
-
-//                 .spinner-border {
-//                     width: 1.2rem;
-//                     height: 1.2rem;
-//                     margin-inline-end: 5px;
-//                     border-width: .2em;
-//                 }
-//             }
-//         }
-
-//         .head-team-box {
-//             .image {
-//                 height: 100%;
-//                 @extend %center;
-//                 background-image: url(http://demo.ovathemes.com/athens/wp-content/uploads/2021/12/bg-attorney-single-bio.png);
-//                 background-repeat: no-repeat;
-//                 background-position: bottom right;
-//                 background-color: rgba(11, 25, 66, 1);
-
-//                 img {
-//                     @extend %fitimage;
-//                     background-color: #dae4ed;
-//                     width: 100%;
-//                     height: 100%;
-//                     // @include borderRadius(50%)
-//                 }
-//             }
-
-//             .details {
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: space-between;
-//                 height: 100%;
-
-//                 .title {
-//                     padding: 25px 25px 0;
-//                     margin-bottom: 35px;
-
-//                     h3 {
-//                         font-size: 26px;
-//                         font-weight: 600;
-//                     }
-
-//                     span {
-//                         color: $main_color;
-//                         font-style: italic;
-//                     }
-
-//                     p {
-//                         margin-bottom: 5px;
-//                     }
-//                 }
-
-//                 .text {
-//                     background-color: #fff;
-//                     padding: 25px;
-
-//                     p {
-//                         margin-bottom: 20px;
-//                     }
-
-//                     ul {
-//                         li {
-//                             a {
-//                                 color: #222;
-//                             }
-//                         }
-//                     }
-
-//                     .btn {
-//                         background-color: $main_color;
-//                         @include borderRadius(0);
-//                         padding: 10px 20px;
-//                         color: #fff;
-//                         // margin-bottom: -25px;
-//                         // margin-left: -25px;
-//                         font-style: 16px;
-//                         text-transform: capitalize;
-//                         @include transition(all ease .3s);
-
-//                         &:hover {
-//                             background-color: $second_color;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-
-//         .team-box {
-//             text-align: center;
-//             margin-bottom: 25px;
-
-//             .image {
-//                 overflow: hidden;
-//                 // @include borderRadius(10px);
-//                 height: 300px;
-//                 // width: 220px;
-//                 margin: 0 auto 25px;
-//                 border: 1px solid #fff;
-
-//                 a {
-//                     cursor: pointer;
-//                 }
-
-//                 img {
-//                     // border: 2px solid #fff;
-//                     // @include borderRadius(10px);
-//                     @extend %fitimage;
-//                     @include transition(all ease 0.5s);
-
-//                     &:hover {
-//                         @include transform(scale(1.1))
-//                     }
-//                 }
-//             }
-
-//             .details {
-//                 .title {
-//                     margin-bottom: 15px;
-
-//                     h3 {
-//                         font-size: 22px;
-//                         font-weight: 600;
-//                         color: #111;
-//                     }
-
-//                     p {
-//                         margin: auto;
-//                     }
-//                 }
-
-//                 .social {
-//                     a {
-//                         color: $second_color;
-//                         padding: 0 5px;
-
-//                         &:hover {
-//                             color: $main_color;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-
-//         .notfound-txt {
-//             text-align: center;
-
-//             h3 {
-//                 color: #d4d8db;
-//                 margin-bottom: 30px;
-//                 font-size: 50px;
-//                 font-weight: 700;
-//             }
-
-//             h4 {
-//                 color: $main_color;
-//                 margin-bottom: 10px;
-//             }
-//         }
-//     }
-// }
 
 .single-team {
     padding: 70px 0;
@@ -2722,17 +2510,40 @@ section.contact-in-page {
 
         .contact-info {
             padding-bottom: 70px;
+
             .info-box {
                 box-shadow: 0px 0px 40px 0px rgb(0 0 0 / 5%);
                 padding: 37px 30px;
                 @include borderRadius(10px);
+                position: 0;
+                position: relative;
+                overflow: hidden;
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $second_color;
+                    @include transition(all 0.3s ease);
+                }
 
                 i {
                     margin-inline-end: 10px;
-                    color: $main_color;
-                    font-size: 20px;
+                    color: $second_color;
+                    font-size: 22px;
                 }
-                a, span {
+
+                a,
+                span {
                     color: $dark_color;
                     font-size: 20px;
                 }
