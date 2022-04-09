@@ -2430,7 +2430,7 @@ footer {
 					display: block;
 
 					img {
-						max-width: 385px;
+						width: 385px;
 					}
 				}
 
@@ -2468,8 +2468,7 @@ footer {
 						display: inline-flex;
 
 						&:hover {
-							color: #fff;
-							background-color: $main_color;
+							background-color: $second_color;
 							opacity: 1;
 						}
 					}

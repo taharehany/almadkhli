@@ -1,0 +1,95 @@
+extend index
+
+block website_title
+    title #{website_title} | single service
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 single service
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") single service
+    //breadcrumb
+    
+    //single service page
+    section(class="single-service")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="service-image")
+                            img(src="images/services/serv-1.jpg", alt="")
+                        div(class="text")
+                            div(class="service-title")
+                                h3 here is Single Service main title
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            h3 this is title
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            h3 overview
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                            h3 this is title
+                            p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis alias tenetur maxime quos vel officiis, excepturi eligendi culpa reiciendis vero dolore error odio voluptate labore aut pariatur molestias quisquam soluta? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo non illum reiciendis distinctio fugit? Nobis quas, quo aliquid, eligendi eveniet laborum molestias, consectetur vitae voluptatibus sit explicabo dolorum et culpa!
+                    div(class="col-lg-4") 
+                        div(class="side-widget")
+                            div(class="key-contacts")
+                                div(class="side-widget-title")
+                                    h4 Key Contacts
+                                div(class="key-contacts-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(data-src="images/team/01.jpg", class="img-fluid" alt="")
+                                    div(class="key-contacts-details")
+                                        a(href="#!") 
+                                            p(class="name") Brayan Olson
+                                        p(class="pos") Senior Associate
+                                        a(class="btn", href="#!") more
+                                            i(class="bi bi-chevron-right")
+                                div(class="key-contacts-box")
+                                    a(href="#!") 
+                                        div(class="image")
+                                            img(data-src="images/team/01.jpg", class="img-fluid" alt="")
+                                    div(class="key-contacts-details")
+                                        a(href="#!") 
+                                            p(class="name") Brayan Olson
+                                        p(class="pos") Senior Associate
+                                        a(class="btn", href="#!") more
+                                            i(class="bi bi-chevron-right")
+                            div(class="other-service")
+                                div(class="side-widget-title")
+                                    h4 All service
+                                ul 
+                                    li 
+                                        a(href="#!" class="active") this is title service 01
+                                    li 
+                                        a(href="#!") this is title service 02
+                                    li 
+                                        a(href="#!") this is title service 03
+                                    li 
+                                        a(href="#!") this is title service 04
+    //single service page
+    
+    //clients
+    //- section(class="clients")
+        div(class="container")
+            div(class="main-title")
+                h2 our clients
+            div(class="content")
+                div(class="clients-carousel owl-carousel owl-theme")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/01.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/02.png" alt="")
+                    div(class="item")
+                        img(class="img-fluid" data-src="images/clients/03.png" alt="")
+    //clients

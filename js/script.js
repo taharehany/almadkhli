@@ -237,7 +237,7 @@ $(window).on("load", function () {
   $('.loader').delay(500).fadeOut(500);
 
   //file upload
-  $('.apply input[type="file"], .apply-in-careers input[type="file"]').each(function () {
+  $('.apply-job input[type="file"], .apply-in-careers input[type="file"]').each(function () {
     // get label text
     var label = $(this).parents('.form-group').find('label').text();
     label = (label) ? label : 'Upload your resume';
