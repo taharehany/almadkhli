@@ -1905,7 +1905,6 @@ section.training {
                     @extend %fitimage;
                     background-color: #dae4ed;
                     @include transition(all ease .3s);
-                    // min-height: 500px;
                 }
             }
 
@@ -1998,7 +1997,8 @@ section.training2 {
             &:hover {
                 .image {
                     img {
-                        @include transform(scale(1.2))
+                        @include transform(scale(1.1));
+                        filter: grayscale(0);
                     }
                 }
             }
@@ -2013,6 +2013,7 @@ section.training2 {
                     @extend %fitimage;
                     background-color: #dae4ed;
                     @include transition(all ease 0.3s);
+                    filter: grayscale(100%);
                 }
             }
 
@@ -2058,8 +2059,8 @@ section.training2 {
                 .btn {
                     background-color: $main_color;
                     @include borderRadius(50%);
-                    width: 50px;
-                    height: 50px;
+                    width: 45px;
+                    height: 45px;
                     padding: 0;
                     color: #fff;
                     font-style: 16px;
