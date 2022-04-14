@@ -20,15 +20,6 @@ block home_block
     section(class="knowledge")
         div(class="container")
             div(class="content")
-                //ul(class="nav nav-pills", role="tablist")
-                    li(class="nav-item", role="presentation")
-                        button(class="nav-link active", id="knowledge-1-tab" data-bs-toggle="pill", data-bs-target="#knowledge-1", type="button", role="tab", aria-controls="knowledge-1", aria-selected="true") news & insights
-                    li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-2-tab" data-bs-toggle="pill", data-bs-target="#knowledge-2", type="button", role="tab", aria-controls="knowledge-2", aria-selected="false") Lex update
-                    li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-3-tab" data-bs-toggle="pill", data-bs-target="#knowledge-3", type="button", role="tab", aria-controls="knowledge-3", aria-selected="false") Podcast
-                    li(class="nav-item", role="presentation")
-                        button(class="nav-link", id="knowledge-4-tab" data-bs-toggle="pill", data-bs-target="#knowledge-4", type="button", role="tab", aria-controls="knowledge-4", aria-selected="false") Media gallery
                 //search
                 div(class="search-part")
                     div(class="content")
@@ -66,6 +57,15 @@ block home_block
                                         button(class="btn" class="submit" type="submit")
                                             | search
                                             i(class="bi bi-search")
+                ul(class="nav nav-pills", role="tablist")
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link active", id="knowledge-1-tab" data-bs-toggle="pill", data-bs-target="#knowledge-1", type="button", role="tab", aria-controls="knowledge-1", aria-selected="true") news & insights
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-2-tab" data-bs-toggle="pill", data-bs-target="#knowledge-2", type="button", role="tab", aria-controls="knowledge-2", aria-selected="false") Lex update
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-3-tab" data-bs-toggle="pill", data-bs-target="#knowledge-3", type="button", role="tab", aria-controls="knowledge-3", aria-selected="false") Media gallery
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-4-tab" data-bs-toggle="pill", data-bs-target="#knowledge-4", type="button", role="tab", aria-controls="knowledge-4", aria-selected="false") Podcast
                 div(class="tab-content")
                     div(class="tab-pane fade show active", id="knowledge-1" role="tabpanel", aria-labelledby="knowledge-1-tab") 
                         //blogs
@@ -85,8 +85,9 @@ block home_block
                                                         i(class="bi bi-pencil-square")
                                                         | by 
                                                         a(href="#!") Ahmed Saif
-                                                h3(class="title")
-                                                    a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
                                                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
                                                 div(class="more")
                                                     a(href="" class="btn") 
@@ -104,8 +105,9 @@ block home_block
                                                         i(class="bi bi-pencil-square")
                                                         | by 
                                                         a(href="#!") Ahmed Saif
-                                                h3(class="title")
-                                                    a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
                                                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
                                                 div(class="more")
                                                     a(href="" class="btn") 
@@ -123,8 +125,9 @@ block home_block
                                                         i(class="bi bi-pencil-square")
                                                         | by 
                                                         a(href="#!") Ahmed Saif
-                                                h3(class="title")
-                                                    a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
                                                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
                                                 div(class="more")
                                                     a(href="" class="btn") 
@@ -142,8 +145,6 @@ block home_block
                                                 a(href="files/file.pdf" download="download" class="layer") 
                                                     i(class="bi bi-file-earmark-pdf")
                                             div(class="details")
-                                                h3(class="title")
-                                                    a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
                                                 ul(class="meta")
                                                     li(class="date")
                                                         i(class="bi bi-calendar")
@@ -152,52 +153,9 @@ block home_block
                                                         i(class="bi bi-pencil-square")
                                                         | by 
                                                         a(href="#!") Ahmed Saif
-                                                ul(class="share")
-                                                    li
-                                                        a(href="#" class="bi bi-facebook")
-                                                        a(href="#" class="bi bi-twitter")
-                                                        a(href="#" class="bi bi-instagram")
-                                                        a(href="#" class="bi bi-linkedin")
-                                    div(class="col-lg-4 col-md-4 box")
-                                        div(class="lex-update-box")
-                                            div(class="image")
-                                                img(class="img-fluid" data-src="images/blogs/02.jpg" alt="")
-                                                a(href="single-lex-update.html" class="layer") 
-                                                    i(class="bi bi-file-earmark-pdf")
-                                            div(class="details")
-                                                h3(class="title")
-                                                    a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                                                ul(class="meta")
-                                                    li(class="date")
-                                                        i(class="bi bi-calendar")
-                                                        | August 18, 2018
-                                                    li(class="auther")
-                                                        i(class="bi bi-pencil-square")
-                                                        | by 
-                                                        a(href="#!") Marwan
-                                                ul(class="share")
-                                                    li
-                                                        a(href="#" class="bi bi-facebook")
-                                                        a(href="#" class="bi bi-twitter")
-                                                        a(href="#" class="bi bi-instagram")
-                                                        a(href="#" class="bi bi-linkedin")
-                                    div(class="col-lg-4 col-md-4 box")
-                                        div(class="lex-update-box")
-                                            div(class="image")
-                                                img(class="img-fluid" data-src="images/blogs/03.jpg" alt="")
-                                                a(href="single-lex-update.html" class="layer") 
-                                                    i(class="bi bi-file-earmark-pdf")
-                                            div(class="details")
-                                                h3(class="title")
-                                                    a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                                                ul(class="meta")
-                                                    li(class="date")
-                                                        i(class="bi bi-calendar")
-                                                        | August 18, 2018
-                                                    li(class="auther")
-                                                        i(class="bi bi-pencil-square")
-                                                        | by 
-                                                        a(href="#!") Nadeen
+                                                div(class="title")
+                                                    h3 
+                                                        a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
                                                 ul(class="share")
                                                     li
                                                         a(href="#" class="bi bi-facebook")
@@ -206,6 +164,51 @@ block home_block
                                                         a(href="#" class="bi bi-linkedin")
                         //lex update
                     div(class="tab-pane fade", id="knowledge-3" role="tabpanel", aria-labelledby="knowledge-3-tab")
+                        //gallery
+                        section(class="gallery")
+                            div(class="content")
+                                div(class="row")
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="images/blogs/01.jpg" alt="")
+                                                a(href="images/blogs/01.jpg" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-plus-lg")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="images/blogs/02.jpg" alt="")
+                                                a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-caret-right")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="images/blogs/03.jpg" alt="")
+                                                a(href="images/blogs/03.jpg" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-plus-lg")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018 
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                        //gallery
+                    div(class="tab-pane fade", id="knowledge-4" role="tabpanel", aria-labelledby="knowledge-4-tab")
                         section(class="podcast")
                             div(class="container")
                                 div(class="content")
@@ -306,48 +309,6 @@ block home_block
                                                 audio(controls, width="100%")
                                                     source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
                                                     | Your browser does not support the audio tag.
-                    div(class="tab-pane fade", id="knowledge-4" role="tabpanel", aria-labelledby="knowledge-4-tab")
-                        //gallery
-                        section(class="gallery")
-                            div(class="content")
-                                div(class="row")
-                                    div(class="col-lg-4 col-md-4 box")
-                                        div(class="gallery-box")
-                                            div(class="image")
-                                                img(class="img-fluid" data-src="images/blogs/01.jpg" alt="")
-                                                a(href="images/blogs/01.jpg" data-fancybox="gallery" class="layer") 
-                                                    i(class="bi bi-zoom-in")
-                                            div(class="details")
-                                                h3(class="title") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                                                ul(class="meta")
-                                                    li(class="date")
-                                                        i(class="bi bi-calendar")
-                                                        | August 18, 2018
-                                    div(class="col-lg-4 col-md-4 box")
-                                        div(class="gallery-box")
-                                            div(class="image")
-                                                img(class="img-fluid" data-src="images/blogs/02.jpg" alt="")
-                                                a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery" class="layer") 
-                                                    i(class="bi bi-caret-right")
-                                            div(class="details")
-                                                h3(class="title") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                                                ul(class="meta")
-                                                    li(class="date")
-                                                        i(class="bi bi-calendar")
-                                                        | August 18, 2018
-                                    div(class="col-lg-4 col-md-4 box")
-                                        div(class="gallery-box")
-                                            div(class="image")
-                                                img(class="img-fluid" data-src="images/blogs/03.jpg" alt="")
-                                                a(href="images/blogs/03.jpg" data-fancybox="gallery" class="layer") 
-                                                    i(class="bi bi-zoom-in")
-                                            div(class="details")
-                                                h3(class="title") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
-                                                ul(class="meta")
-                                                    li(class="date")
-                                                        i(class="bi bi-calendar")
-                                                        | August 18, 2018
-                        //gallery
                 //if not find any results
                 //- div(class="notfound-txt")
                     h3 Oops!

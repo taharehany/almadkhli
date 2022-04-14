@@ -447,7 +447,7 @@ header {
 			position: relative;
 			color: #fff;
 			font-size: 16px;
-			padding: 5px 15px;
+			padding: 10px 15px;
 			font-weight: 500;
 			border-radius: 0px;
 			border: none;
@@ -455,6 +455,7 @@ header {
 			// background-color: #fff;
 			text-transform: capitalize;
 			white-space: nowrap;
+			@include borderRadius(7px);
 
 			&:focus,
 			&:active,
