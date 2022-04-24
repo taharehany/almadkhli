@@ -73,6 +73,20 @@ html[dir=rtl] {
     }
 
     section.main-slider {
+        .main-slider-carousel {
+            &::after {
+                left: 0;
+                right: auto;
+                @include transform(rotateY(180deg))
+            }
+
+            &::before {
+                left: 0;
+                right: auto;
+                @include transform(rotateY(180deg))
+            }
+        }
+
         .slider-item {
             .item-details {
                 .item-text {
@@ -80,29 +94,67 @@ html[dir=rtl] {
                 }
             }
         }
-    }
 
-    section.why-us {
-        .content {
-            .why-box {
-                direction: rtl;
+        .owl-theme {
+            .owl-nav {
+                left: 60px;
+                right: auto;
             }
         }
     }
 
-    section.blogs .content .blogs-box .details,
-    section.blogs-in-page .content .blogs-box .details {
-        direction: rtl;
+    section.about {
+        &::before {
+            right: 0;
+            left: auto;
+        }
+
+        .content {
+            .about-image {
+                &::after {
+                    right: 0;
+                    left: auto;
+                }
+            }
+
+            .about-text {
+                ul {
+                    li {
+                        &::before {
+                            right: 0;
+                            left: auto;
+                        }
+                    }
+                }
+            }
+        }
     }
 
-    section.about-in-page .content .text ul li::before {
-        right: 0;
-        left: auto;
-    }
+    section.services {
+        .content {
+            .box {
+                .layer {
+                    .custom-btn {
+                        &:hover {
+                            &::after {
+                                right: calc(100% + 30px);
+                                left: auto;
+                            }
+                        }
 
-    section.about-in-page .content .box:nth-child(even) {
-        .text {
-            direction: rtl;
+                        &::before {
+                            right: calc(100% + 10px);
+                            left: auto;
+                        }
+
+                        &::after {
+                            right: calc(100% + 10px);
+                            left: auto;
+                            @include transform(scaleX(-1))
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -232,51 +284,122 @@ html[dir=rtl] {
         }
     }
 
+    section.about-in-page .content .about-box .about-details .main-title::before {
+        right: calc(-50px - 12px);
+        left: auto;
+    }
+
+    section.services-page .content .service-box .more {
+        left: 15px;
+        right: auto;
+
+        i {
+            @include transform(rotateY(180deg))
+        }
+    }
+
+    .side-widget .other-service ul li a {
+        &::after {
+            right: auto;
+            left: 10px;
+            @include transform(rotateY(180deg));
+            top: 24%;
+        }
+        &::before {
+            right: 0;
+            left: auto;
+        }
+    }
+    .side-widget .key-contacts .btn i::before {
+        @include transform(rotateY(180deg));
+    }
+    section.knowledge .content .nav .nav-item .nav-link {
+        @include borderRadius(10px)
+    }
+    section.single-blog .content .single-blog-box .details ul li::before {
+        right: 0;
+        left: auto;
+    }
+    section.training2 .content .training-box .details .btn {
+        right: auto;
+        left: 10px;
+
+        i {
+            @include transform(rotateY(180deg));
+        }
+    }
+
     section.counter-numbers .content .counter-boxs .col::before {
         right: 0;
         left: auto
     }
+
     section.news .content .news-box {
         direction: rtl
     }
-    [class^=bi-]::before, [class*=" bi-"]::before {
+
+    [class^=bi-]::before,
+    [class*=" bi-"]::before {
         vertical-align: middle;
     }
+
     section.single-blog .content .single-blog-box .comments-list .comment-item .comment-body span {
         left: 0;
         right: auto;
     }
+
     section.single-expertise .content .nav .nav-item .nav-link::before {
         right: 0;
         left: auto;
     }
-    .modal .more-info .content .contact h4::after, .modal .team .content .head-team-box .details .text h4::after, section.training .content .training-box .details .title h3::after {
+
+    .modal .more-info .content .contact h4::after,
+    .modal .team .content .head-team-box .details .text h4::after,
+    section.training .content .training-box .details .title h3::after {
         right: 0;
         left: auto;
     }
+
     .modal .more-info .content .accordion .accordion-item .accordion-button::after {
         margin-left: 0;
         margin-right: auto;
     }
+
     .modal-header .btn-close {
         margin-left: 0;
     }
+
     section.training .content .training-box .details .text {
         background-position: bottom left;
     }
-    section.about .just, section.about-in-page .just {
+
+    section.about .just,
+    section.about-in-page .just {
         right: auto;
         left: 0;
     }
+
     section.knowledge .content .nav .nav-item .nav-link::before {
         right: 15px;
         left: auto;
     }
+
     section.knowledge .content .nav {
         padding: 0;
     }
+
     footer {
         .footer-content {
+            .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+                margin-right: -1px;
+                margin-right: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+
             .footer-box {
                 .contact {
                     ul {
@@ -288,19 +411,6 @@ html[dir=rtl] {
                                 right: 0;
                                 left: auto
                             }
-                        }
-                    }
-                }
-
-                .map-links {
-                    li {
-                        padding-left: 0;
-                        padding-right: 20px;
-
-                        &::before {
-                            right: 0;
-                            left: auto;
-                            @include transform(rotate(180deg) translateY(50%));
                         }
                     }
                 }

@@ -1,0 +1,30 @@
+extend index
+
+block website_title
+    title #{website_title} | error 404
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 404
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") 404
+    //breadcrumb
+
+    //error 404
+    div(class="error")
+        div(class="container")
+            div(class="text-center mx-auto") 
+                img(data-src="images/icons/404-image.png" class="error-img img-fluid" alt="error image")
+                p(class="lead text-gray-800 mb-4") SORRY WE CAN’T FIND THAT PAGE!
+                div(class="back-btn")
+                    a(href="index.html" class="btn") back to home
+    //error 404
+

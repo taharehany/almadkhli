@@ -21,11 +21,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <div class="main-wrapper">
       <!--PreLoader-->
+      <div class="loader"><img class="img-fluid" src="images/loading.svg"></div>
       <!--PreLoader-->
       <!--social links-->
       <!--social links-->
@@ -35,7 +37,7 @@
         <nav class="navbar main-nav navbar-expand-lg">
           <div class="container-fluid">
             <div class="navbar-content">
-              <div class="group"><a class="navbar-brand" area-label="Logo" href="index.html"> <img class="img-fluid" src="images/logo-white.png" alt=""></a>
+              <div class="group"><a class="navbar-brand" area-label="Logo" href="index.html"> <img class="img-fluid" data-src="images/logo-white.png" alt=""></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
                   <div class="hamburger-menu"><span></span><span></span><span></span></div>
                 </button>
@@ -47,8 +49,6 @@
                   <li class="nav-item"><a class="nav-link" href="services.html">services</a></li>
                   <li class="nav-item"><a class="nav-link" href="knowledge.html">our knowledge</a></li>
                   <li class="nav-item"><a class="nav-link" href="team.html">our team</a></li>
-                  <li class="nav-item"><a class="nav-link" href="careers.html">careers</a></li>
-                  <li class="nav-item"><a class="nav-link" href="training.html">training</a></li>
                   <li class="nav-item"><a class="nav-link" href="contact.html">contact us</a></li>
                   <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">pages</a>
                     <ul class="dropdown-menu">
@@ -65,6 +65,12 @@
                       <li><a class="dropdown-item" href="privacy-policy.html">privacy policy</a></li>
                       <li><a class="dropdown-item" href="terms.html">terms</a></li>
                       <li><a class="dropdown-item" href="404.html">404</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">language</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="arabic/index.html">arabic</a></li>
+                      <li><a class="dropdown-item" href="">english</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -108,6 +114,12 @@
                       <li><a class="dropdown-item" href="privacy-policy.html">privacy policy</a></li>
                       <li><a class="dropdown-item" href="terms.html">terms</a></li>
                       <li><a class="dropdown-item" href="404.html">404</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">language</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="arabic/index.html">arabic</a></li>
+                      <li><a class="dropdown-item" href="">english</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -186,7 +198,7 @@
             <div class="row">
               <div class="col-lg-9">
                 <div class="single-career-box">
-                  <div class="image"><img class="img-fluid" src="images/career.webp" alt=""></div>
+                  <div class="image"><img class="img-fluid" data-src="images/career.webp" alt=""></div>
                   <div class="text">
                     <h3 class="job-title">Puffy Pancakes Glazed With Caramel Topped With Fruits</h3>
                     <div class="time"><i class="bi bi-calendar-event"></i><span>full time</span></div>
@@ -348,7 +360,7 @@
     <script src="js/jquery.ratyli.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.min.js"></script>
-    <script src="js/wow.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -126,6 +126,10 @@ section.about-in-page {
         .about-box {
             margin-bottom: 100px;
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             &:nth-child(even) {
                 .about-details {
                     direction: rtl;
@@ -770,7 +774,7 @@ section.single-service {
 
 //search
 .search-part {
-    margin: 65px 0;
+    margin: 0 0 65px 0;
     @include borderRadius(7px);
 
     .content {
@@ -934,7 +938,6 @@ section.knowledge {
                     margin-inline-end: 5px;
                     padding: 25px 30px;
                     width: 100%;
-                    padding-inline-start: 30px;
                     position: relative;
                     background-color: #f3f3f3;
                     color: #000;
@@ -1739,7 +1742,7 @@ section.apply {
             }
 
             i {
-                margin-right: 10px;
+                margin-inline-end: 10px;
                 background-color: $second_color;
                 height: 30px;
                 width: 30px;
@@ -2074,7 +2077,7 @@ section.training2 {
                 bottom: 0;
                 @include borderRadius(7px);
                 background-color: $second_color;
-                width: 50%;
+                width:285px;
                 padding: 25px;
                 padding-inline-end: 70px;
                 margin-inline-start: -20px;
@@ -2117,7 +2120,7 @@ section.training2 {
                     height: 45px;
                     padding: 0;
                     color: #fff;
-                    font-style: 16px;
+                    font-size: 16px;
                     position: absolute;
                     right: 20px;
                     bottom: 20px;
@@ -2222,7 +2225,7 @@ section.single-blog {
                     li {
                         position: relative;
                         margin-top: 10px;
-                        padding-left: 25px;
+                        padding-inline-start: 25px;
                         list-style: none;
 
                         &::before {

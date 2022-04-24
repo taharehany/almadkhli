@@ -1,0 +1,70 @@
+extend index
+
+block website_title
+   title #{website_title} | contact us
+
+block home_block
+   //breadcrumb
+   nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+      div(class="shape-1")
+      div(class="shape-2")
+      div(class="container")
+         div(class="breadcrumb-title")
+               h2 contact us
+         nav(aria-label="breadcrumb")
+               ol(class="breadcrumb")
+                  li(class="breadcrumb-item")
+                     a(href="index.html") Home
+                  li(class="breadcrumb-item active", aria-current="page") contact us
+   //breadcrumb
+
+   section(class="contact-in-page")
+      div(class="container")
+         div(class="content")
+            div(class="contact-info")
+               div(class="row")
+                  div(class="col-md-4 col-lg-4")
+                     div(class="info-box aos-init aos-animate", data-aos="fade-up")
+                        i(class="bi bi-envelope")
+                        a(href="mailto:meher@mailinator.com") meher@mailinator.com
+                  div(class="col-md-4 col-lg-4")
+                     div(class="info-box aos-init aos-animate", data-aos="fade-up", data-aos-delay="200")
+                        i(class="bi bi-telephone")
+                        a(href="tel:+1 (667) 947-4345", dir="ltr") +1 (667) 947-4345
+                  div(class="col-md-4 col-lg-4")
+                     div(class="info-box aos-init aos-animate", data-aos="fade-up", data-aos-delay="300")
+                        i(class="bi bi-pin-map")
+                        span Donaldson and Walters Co
+            div(class="row")
+               div(class="col-lg-4")
+                  div(class="main-title")
+                     h2 contact us now
+                     p Subscribe to our newsletters, call us to book a meetup or send us emails to request for service consultation.
+                  div(class="links")
+                     a(class="bi bi-facebook" href="#")
+                     a(class="bi bi-twitter" href="#")
+                     a(class="bi bi-instagram" href="#")
+                     a(class="bi bi-linkedin" href="#")
+               div(class="col-lg-8")
+                  div(class="contact-form")
+                     form(class="needs-validation", novalidate)
+                        div(class="row")
+                           div(class="col-lg-6")
+                              div(class="form-group position-relative")
+                                 input(class="form-control" type="text" placeholder="Name")
+                           div(class="col-lg-6")
+                              div(class="form-group position-relative")
+                                 input(class="form-control" type="email" placeholder="Email")
+                           div(class="col-lg-12")
+                              div(class="form-group position-relative")
+                                 input(class="form-control" type="text" placeholder="Phone")
+                           div(class="col-lg-12")
+                              div(class="form-group")
+                                 textarea(class="form-control" rows="5" placeholder="Leave a comment here")
+                        div(class="contact-btn")
+                           button(class="btn" type="submit") send now
+
+   //map
+   section(class="map-area")
+      iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14503.071630538347!2d46.74685192199276!3d24.66611594633343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f051c4b48713f%3A0xa4efac11b7c14539!2zQWxtYWRraGxpIExhdyBGaXJtINin2YTZhdiv2K7ZhNmKINmE2YTZhdit2KfZhdin2Kkg2YjYp9mE2KfYs9iq2LTYp9ix2KfYqiDYp9mE2YLYp9mG2YjZhtmK2Kk!5e0!3m2!1sar!2seg!4v1649020193126!5m2!1sar!2seg" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+   //map

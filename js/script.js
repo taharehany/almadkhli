@@ -277,14 +277,18 @@ $(window).on("load", function () {
     "ordering": true
   });
 
-  if ($(".wow").length) {
-    let wow = new WOW({
-      boxClass: 'wow',
-      animateClass: 'animated',
-      offset: 50,
-      mobile: false,
-      live: true
-    });
-    // wow.init();
-  }
+  // if ($(".wow").length) {
+  //   let wow = new WOW({
+  //     boxClass: 'wow',
+  //     animateClass: 'animated',
+  //     offset: 50,
+  //     mobile: false,
+  //     live: true
+  //   });
+  //   wow.init();
+  // }
+
+  AOS.init({
+    duration: 1000
+  });
 });

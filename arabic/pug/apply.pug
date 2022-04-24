@@ -1,0 +1,56 @@
+extend index
+
+block website_title
+    title #{website_title} | apply job
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 apply job
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") apply job
+    //breadcrumb
+
+    //apply
+    section(class="apply")
+        div(class="container")
+            div(class="content")
+                div(class="form-area")
+                    //div(class="alert alert-danger alert-dismissible fade show", role="alert")
+                        strong Holy guacamole!
+                        | You should check in on some of those fields below.
+                        button(type="button", class="btn-close", data-bs-dismiss="alert", aria-label="Close")
+                    form(action="")
+                        div(class="row")
+                            div(class="col-lg-6")
+                                div(class="form-group")
+                                    input(placeholder="First Name" class="form-control" type="text" required)
+                            div(class="col-lg-6")
+                                div(class="form-group")
+                                    input(placeholder="Last Name" class="form-control" type="text" required)
+                            div(class="col-lg-6")
+                                div(class="form-group")
+                                    input(placeholder="Phone" class="form-control" type="number" required)
+                            div(class="col-lg-6")
+                                div(class="form-group")
+                                    input(placeholder="Email" class="form-control" type="email" required)
+                            div(class="col-lg-12")
+                                div(class="form-group")
+                                    textarea(placeholder="Message" rows="7" class="form-control")
+                            div(class="col-lg-12")
+                                div(class="upload")
+                                    i(class="bi bi-upload")
+                                    label.sr-only(for="file") Upload your resume
+                                    input#file(type="file")
+                            div(class="col-lg-12")
+                                div(class="form-group button")
+                                    button(class="btn" type="submit") Apply now
+                            //div(class="col-lg-12")
+                                p(class="successfully") Thank You For Your Apply

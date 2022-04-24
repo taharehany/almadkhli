@@ -1,0 +1,70 @@
+extend index
+
+block website_title
+    title #{website_title} | services
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 services
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") services
+    //breadcrumb
+    
+    //services page
+    section(class="services-page")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-3 col-md-6 col-sm-6 box" data-aos="fade-up")
+                        div(class="service-box")
+                            div(class="image")
+                                img(data-src="../images/services/serv-1.jpg", alt="")
+                            div(class="details")
+                                div(class="more")
+                                    a(class="btn") 
+                                        i(class="bi bi-chevron-right")
+                                div(class="title")
+                                    a(href="single-service.html") 
+                                        h3 Litigation, Arbitration and Dispute Resolution
+                    div(class="col-lg-3 col-md-6 col-sm-6 box" data-aos="fade-up" data-aos-delay="100")
+                        div(class="service-box")
+                            div(class="image")
+                                img(data-src="../images/services/serv-2.jpg", alt="")
+                            div(class="details")
+                                div(class="more")
+                                    a(class="btn") 
+                                        i(class="bi bi-chevron-right")
+                                div(class="title")
+                                    a(href="single-service.html") 
+                                        h3 Litigation, Arbitration and Dispute Resolution
+                    div(class="col-lg-3 col-md-6 col-sm-6 box" data-aos="fade-up" data-aos-delay="200")
+                        div(class="service-box")
+                            div(class="image")
+                                img(data-src="../images/services/serv-3.jpg", alt="")
+                            div(class="details")
+                                div(class="more")
+                                    a(class="btn") 
+                                        i(class="bi bi-chevron-right")
+                                div(class="title")
+                                    a(href="single-service.html") 
+                                        h3 Litigation, Arbitration and Dispute Resolution
+                    div(class="col-lg-3 col-md-6 col-sm-6 box" data-aos="fade-up" data-aos-delay="300")
+                        div(class="service-box")
+                            div(class="image")
+                                img(data-src="../images/services/serv-1.jpg", alt="")
+                            div(class="details")
+                                div(class="more")
+                                    a(class="btn") 
+                                        i(class="bi bi-chevron-right")
+                                div(class="title")
+                                    a(href="single-service.html") 
+                                        h3 Litigation, Arbitration and Dispute Resolution
+    //services page

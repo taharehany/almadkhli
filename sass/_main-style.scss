@@ -1,12 +1,7 @@
 //global style
-@font-face {
-	font-family: 'Barkentina';
-	src: url('fonts/Barkentina.ttf.woff') format('woff'),
-		url('fonts/Barkentina.ttf.svg#Barkentina') format('svg'),
-		url('fonts/Barkentina.ttf.eot'),
-		url('fonts/Barkentina.ttf.eot?#iefix') format('embedded-opentype');
-	font-weight: normal;
-	font-style: normal;
+.main-wrapper {
+	width: 100%;
+	overflow: hidden;
 }
 
 body {
@@ -77,7 +72,7 @@ header {
 	z-index: 999;
 
 	&.fixed {
-		.navbar {
+		.main-nav {
 			top: 0;
 			background-color: $main_color;
 			box-shadow: 0 10px 30px 0px rgb(0 0 0 / 8%);
@@ -182,6 +177,9 @@ header {
 					.dropdown-menu[data-bs-popper] {
 						margin: 0;
 						min-width: 225px;
+						@include borderRadius(7px);
+						border: 0;
+						overflow: hidden;
 					}
 				}
 
@@ -301,7 +299,7 @@ header {
 
 	.hamburger-menu {
 		display: inline-block;
-		margin-left: auto;
+		margin-inline-start: auto;
 		width: 30px;
 		height: 20px;
 		position: relative;
@@ -383,7 +381,7 @@ header {
 	}
 
 	.offcanvas {
-		background-color: $second_color;
+		background-color: $dark_color;
 		@include boxshadow(0 0 60px rgb(0 0 0 / 40%));
 
 		.btn-close {
@@ -395,7 +393,7 @@ header {
 
 		.offcanvas-header {
 			justify-content: flex-end;
-			background: $second_color;
+			// background: $second_color;
 		}
 
 		.navbar {
@@ -427,7 +425,7 @@ header {
 		.login-side {
 			@extend .login;
 			padding-top: 25px;
-			padding-inline-start: 20px;
+			padding-inline-start: 10px;
 
 			.btn {
 				border-inline-end: none !important;
@@ -725,7 +723,6 @@ section.main-slider {
 			z-index: 5;
 			right: 60px;
 			bottom: 30px;
-			min-width: 160px;
 			justify-content: space-between;
 			display: flex;
 			flex-direction: column;
@@ -800,16 +797,18 @@ section.about {
 	padding: 100px 0 150px;
 	background-color: #fff;
 	position: relative;
+	z-index: 1;
 
 	&::before {
 		content: "";
 		position: absolute;
 		left: 0;
 		top: 0;
-		margin-left: -410px;
+		margin-inline-start: -20%;
 		width: 50%;
 		height: 100%;
 		background: #f4f5f8;
+		z-index: -1;
 	}
 
 	.content {
@@ -848,12 +847,12 @@ section.about {
 			}
 
 			.img1 {
-				margin-inline-start: 110px;
+				margin-inline-start: 15%;
 			}
 
 			.img2 {
-				margin-inline-end: 140px;
-				margin-top: -200px;
+				margin-inline-end: 25%;
+				margin-top: -25%;
 			}
 
 			&::after {
@@ -862,7 +861,7 @@ section.about {
 				left: 0;
 				top: 0;
 				width: 15px;
-				height: 250px;
+				height: 50%;
 				background: $main_color;
 				border-radius: 8px;
 			}
@@ -1054,7 +1053,7 @@ section.video {
 
 		.more-link {
 			position: relative;
-			text-align: right;
+			text-align: end;
 
 			a {
 				position: relative;
@@ -1156,30 +1155,44 @@ section.services {
 			border-color: #fff;
 			border-style: solid;
 
-			&:nth-child(1),&:nth-child(7)  {
+			&:nth-child(1),
+			&:nth-child(7) {
 				border-width: 0;
 				border-bottom-width: 1px;
 			}
-			&:nth-child(2),&:nth-child(8) {
+
+			&:nth-child(2),
+			&:nth-child(8) {
 				border-width: 1px;
 				border-top: 0;
 			}
-			&:nth-child(3),&:nth-child(9) {
+
+			&:nth-child(3),
+			&:nth-child(9) {
 				border-width: 0;
 				border-bottom-width: 1px;
 			}
-			&:nth-child(4),&:nth-child(10) {
+
+			&:nth-child(4),
+			&:nth-child(10) {
 				border-width: 0;
 			}
-			&:nth-child(5),&:nth-child(11) {
+
+			&:nth-child(5),
+			&:nth-child(11) {
 				border-width: 1px;
 				border-top: 0;
 				border-bottom-width: 0;
 			}
-			&:nth-child(6),&:nth-child(12) {
+
+			&:nth-child(6),
+			&:nth-child(12) {
 				border-width: 0;
 			}
-			&:nth-child(4), &:nth-child(5), &:nth-child(6) {
+
+			&:nth-child(4),
+			&:nth-child(5),
+			&:nth-child(6) {
 				border-bottom-width: 1px !important;
 			}
 		}
@@ -1292,7 +1305,6 @@ section.services {
 						font-size: 16px;
 						position: absolute;
 						left: calc(100% + 10px);
-						width: 0;
 						bottom: auto;
 						@include transition(all 0.4s ease-in-out);
 					}
@@ -1398,7 +1410,7 @@ section.counter-numbers {
 					// 	position: absolute;
 					// 	top: calc(100% + 30px);
 					// 	left: 50%;
-					// 	margin-left: -22px;
+					// 	margin-inline-start: -22px;
 					// 	content: '';
 					// 	width: 44px;
 					// 	height: 7px;
@@ -1607,7 +1619,7 @@ section.blogs {
 					}
 
 					.auther {
-						margin-inline-start: 25px;
+						margin-inline-start: 15px;
 
 						a {
 							color: $dark_color;
@@ -2443,7 +2455,7 @@ footer {
 
 					img {
 						width: 7px;
-						margin-left: 5px;
+						margin-inline-start: 5px;
 					}
 				}
 			}

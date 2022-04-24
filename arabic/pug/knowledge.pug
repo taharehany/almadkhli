@@ -1,0 +1,319 @@
+extend index
+
+block website_title
+    title #{website_title} | knowledge
+
+block home_block
+    ///breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 our knowledge
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") our knowledge
+    //breadcrumb
+    
+    //knowledge page
+    section(class="knowledge")
+        div(class="container")
+            div(class="content")
+                //search
+                div(class="search-part")
+                    div(class="content")
+                        form(action="" method="") 
+                            div(class="row")
+                                div(class="col-lg-4 col-md-6")
+                                    div(class="form-group")
+                                        input(type="text" class="form-control" placeholder="Keyword")
+                                div(class="col-lg-2 col-md-6")
+                                    div(class="form-group")
+                                        select(class="form-select select2")
+                                            option(disabled, selected, class="hidden-option") practice area
+                                            option(value="1") option 1
+                                            option(value="2") option 2
+                                            option(value="3") option 3
+                                            option(value="4") option 4
+                                div(class="col-lg-2 col-md-6")
+                                    div(class="form-group")
+                                        select(class="form-select select2")
+                                            option(disabled, selected, class="hidden-option") year
+                                            option(value="1") option 1
+                                            option(value="2") option 2
+                                            option(value="3") option 3
+                                            option(value="4") option 4
+                                div(class="col-lg-2 col-md-6")
+                                    div(class="form-group")
+                                        select(class="form-select select2")
+                                            option(disabled, selected, class="hidden-option") month
+                                            option(value="1") option 1
+                                            option(value="2") option 2
+                                            option(value="3") option 3
+                                            option(value="4") option 4
+                                div(class="col-lg-2 col-md-6")
+                                    div(class="buttons-area")
+                                        button(class="btn" class="submit" type="submit")
+                                            | search
+                                            i(class="bi bi-search")
+                ul(class="nav nav-pills", role="tablist")
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link active", id="knowledge-1-tab" data-bs-toggle="pill", data-bs-target="#knowledge-1", type="button", role="tab", aria-controls="knowledge-1", aria-selected="true") news & insights
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-2-tab" data-bs-toggle="pill", data-bs-target="#knowledge-2", type="button", role="tab", aria-controls="knowledge-2", aria-selected="false") Lex update
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-3-tab" data-bs-toggle="pill", data-bs-target="#knowledge-3", type="button", role="tab", aria-controls="knowledge-3", aria-selected="false") Media gallery
+                    li(class="nav-item", role="presentation")
+                        button(class="nav-link", id="knowledge-4-tab" data-bs-toggle="pill", data-bs-target="#knowledge-4", type="button", role="tab", aria-controls="knowledge-4", aria-selected="false") Podcast
+                div(class="tab-content")
+                    div(class="tab-pane fade show active", id="knowledge-1" role="tabpanel", aria-labelledby="knowledge-1-tab") 
+                        //blogs
+                        section(class="blogs")
+                            div(class="content")
+                                div(class="row")
+                                    div(class="col-lg-4 col-md-6 box")
+                                        div(class="blog-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/01.jpg" alt="")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="auther")
+                                                        i(class="bi bi-pencil-square")
+                                                        | by 
+                                                        a(href="#!") Ahmed Saif
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
+                                                div(class="more")
+                                                    a(href="" class="btn") 
+                                                        i(class="bi bi-chevron-right")
+                                    div(class="col-lg-4 col-md-6 box")
+                                        div(class="blog-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="auther")
+                                                        i(class="bi bi-pencil-square")
+                                                        | by 
+                                                        a(href="#!") Ahmed Saif
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
+                                                div(class="more")
+                                                    a(href="" class="btn") 
+                                                        i(class="bi bi-chevron-right")
+                                    div(class="col-lg-4 col-md-6 box")
+                                        div(class="blog-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/03.jpg" alt="")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="auther")
+                                                        i(class="bi bi-pencil-square")
+                                                        | by 
+                                                        a(href="#!") Ahmed Saif
+                                                div(class="title")
+                                                    h3
+                                                        a(href="single-blog.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere ullam, porro eligendi animi fugit dolorum incidunt 
+                                                div(class="more")
+                                                    a(href="" class="btn") 
+                                                        i(class="bi bi-chevron-right")
+                        //blogs
+                    div(class="tab-pane fade", id="knowledge-2" role="tabpanel", aria-labelledby="knowledge-2-tab") 
+                        //lex update
+                        section(class="lex-update")
+                            div(class="content")
+                                div(class="row")
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="lex-update-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/01.jpg" alt="")
+                                                a(href="files/file.pdf" download="download" class="layer") 
+                                                    i(class="bi bi-file-earmark-pdf")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="auther")
+                                                        i(class="bi bi-pencil-square")
+                                                        | by 
+                                                        a(href="#!") Ahmed Saif
+                                                div(class="title")
+                                                    h3 
+                                                        a(href="single-lex-update.html") Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed 
+                                                ul(class="share")
+                                                    li
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                        //lex update
+                    div(class="tab-pane fade", id="knowledge-3" role="tabpanel", aria-labelledby="knowledge-3-tab")
+                        //gallery
+                        section(class="gallery")
+                            div(class="content")
+                                div(class="row")
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/01.jpg" alt="")
+                                                a(href="images/blogs/01.jpg" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-plus-lg")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/02.jpg" alt="")
+                                                a(href="https://www.youtube.com/watch?v=kxPCFljwJws" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-caret-right")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                    div(class="col-lg-4 col-md-4 box")
+                                        div(class="gallery-box")
+                                            div(class="image")
+                                                img(class="img-fluid" data-src="../images/blogs/03.jpg" alt="")
+                                                a(href="images/blogs/03.jpg" data-fancybox="gallery" class="layer") 
+                                                    i(class="bi bi-plus-lg")
+                                            div(class="details")
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018 
+                                                div(class="title") 
+                                                    h3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                        //gallery
+                    div(class="tab-pane fade", id="knowledge-4" role="tabpanel", aria-labelledby="knowledge-4-tab")
+                        section(class="podcast")
+                            div(class="container")
+                                div(class="content")
+                                    div(class="row")
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                                        div(class="col-lg-6")
+                                            div(class="podcast-box")
+                                                div(class="title")
+                                                    h3 Debugging Tools + Tips
+                                                ul(class="meta")
+                                                    li(class="date")
+                                                        i(class="bi bi-calendar")
+                                                        | August 18, 2018
+                                                    li(class="share")
+                                                        a(href="#" class="bi bi-facebook")
+                                                        a(href="#" class="bi bi-twitter")
+                                                        a(href="#" class="bi bi-instagram")
+                                                        a(href="#" class="bi bi-linkedin")
+                                                audio(controls, width="100%")
+                                                    source(src="https://hwcdn.libsyn.com/p/5/1/8/518b62b2d896549d/Syntax152.mp3?c_id=44542285&cs_id=44542285&expiration=1561491578&hwt=40b42995123424c9086441d814f8a1ba")
+                                                    | Your browser does not support the audio tag.
+                //if not find any results
+                //- div(class="notfound-txt")
+                    h3 Oops!
+                    h4
+                        strong Your search did not match any results.
+    //knowledge page

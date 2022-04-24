@@ -1,0 +1,124 @@
+extend index
+
+block website_title
+    title #{website_title} | single blog
+
+block home_block
+    //breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 single blog
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") single blog
+    //breadcrumb
+
+    //single blog page
+    section(class="single-blog")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-8")
+                        div(class="single-blog-box")
+                            div(class="image")
+                                img(data-src="../images/blogs/blog-post-1.jpg", class="img-fluid" alt="")
+                            div(class="text")
+                                h3(class="post-title") Lorem ipsum dolor sit ametTopped With Fruits
+                                p(class="descrip") Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                            div(class="meta")
+                                div(class="single")
+                                    i(class="bi bi-calendar-event")
+                                    span 25/1/2021
+                                div(class="single")
+                                    i(class="bi bi-eye")
+                                    span 25 views
+                            hr
+                            div(class="details")
+                                h3 this is title
+                                ul
+                                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla 
+                                    li sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione 
+                                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla 
+                                    li tenetur optio laboriosam dicta quia id.
+                                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla 
+                                    li Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla 
+                                    li Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    li tenetur optio laboriosam dicta quia id.
+                                h3 this is title
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum dicta perferendis dolores. Accusantium esse aliquid reprehenderit asperiores corrupti blanditiis nam praesentium iste numquam quae, voluptas, labore sint nemo tempore eum.
+                                h4 another title 2
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga
+                                h4 another title 3
+                                p eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                h4 another title 4
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, suscipit repellendus nulla sint ipsum iste fuga distinctio eveniet totam vero modi, minima quod, ratione tenetur optio laboriosam dicta quia id.
+                                h4 another title 5
+                                p Serve with your choice of topping.
+                            div(class="rating-area")
+                                h3 leave review: 
+                                div(class="rating" id="post_rating")
+                                    span(class="ratyli")
+                            div(class="comments-list")
+                                ul
+                                    li(class="comment-item")
+                                        img(data-src="../images/icons/blank.jpg", alt="comment author")
+                                        div(class="comment-body")
+                                            p(class="comment-auther") Ahmed khaled
+                                            span January 13 2020
+                                            p(class="comment") Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.
+                                    li(class="comment-item")
+                                        img(data-src="../images/icons/blank.jpg", alt="comment author")
+                                        div(class="comment-body")
+                                            p(class="comment-auther") mohamed ahmed
+                                            span January 13 2020
+                                            p(class="comment") Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches
+                            div(class="comment-form")
+                                div(class="subtitle") Leave a comment
+                                form(method="" action="")
+                                    div(class="row")
+                                        div(class="col-md-6 form-group")
+                                            input(type="text", class="form-control", placeholder="Name", name="name", value="")
+                                        div(class="col-md-6 form-group")
+                                            input(type="email", class="form-control", placeholder="Email Address", name="email", value="")
+                                        div(class="col-md-12 form-group")
+                                            textarea(class="form-control", placeholder="Type your comment...", name="comment", rows="7")
+                                    div(class="btn-form")
+                                        button(type="submit", class="btn primary") Post comment
+                    div(class="col-lg-4")
+                        div(class="sidebar-widget")
+                            div(class="related-posts box")
+                                div(class="subtitle") 
+                                    h3 latest posts
+                                div(class="related-post-box")
+                                    div(class="image")
+                                        img(data-src="../images/blogs/01.jpg", class="img-fluid" alt="")
+                                    div(class="text")
+                                        a(href="#!") 
+                                            h4(class="post-title") Lorem ipsum dolor sit amet
+                                div(class="related-post-box")
+                                    div(class="image")
+                                        img(data-src="../images/blogs/02.jpg", class="img-fluid" alt="")
+                                    div(class="text")
+                                        a(href="#!") 
+                                            h4(class="post-title") Lorem ipsum dolor sit amet
+                                div(class="related-post-box")
+                                    div(class="image")
+                                        img(data-src="../images/blogs/03.jpg", class="img-fluid" alt="")
+                                    div(class="text")
+                                        a(href="#!") 
+                                            h4(class="post-title") Lorem ipsum dolor sit amet
+                            div(class="tags box")
+                                div(class="subtitle") 
+                                    h3 Tags
+                                a(href="#") law
+                                a(href="#") performance
+                                a(href="#") kort
+                                a(href="#") lawyer 
+                                a(href="#") Finance
+                                a(href="#") Life Sciences
+    //single blog page

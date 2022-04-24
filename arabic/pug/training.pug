@@ -1,0 +1,77 @@
+extend index
+
+block website_title
+    title #{website_title} | training
+
+block home_block
+    ///breadcrumb
+    nav(aria-label="breadcrumb" class="main-breadcrumb" style="background-image:url('../images/bgs/bread.jpg')")
+        div(class="shape-1")
+        div(class="shape-2")
+        div(class="container")
+            div(class="breadcrumb-title")
+                h2 training
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    li(class="breadcrumb-item")
+                        a(href="index.html") Home
+                    li(class="breadcrumb-item active", aria-current="page") training
+    //breadcrumb
+    
+    //training
+    //- section(class="training")
+        div(class="container")
+            div(class="content")
+                div(class="training-box")
+                    div(class="row")
+                        div(class="col-lg-5 p-0")
+                            div(class="image")
+                                img(data-src="../images/training/01.jpg", class="img-fluid" alt="")
+                        div(class="col-lg-7 p-0")
+                            div(class="details")
+                                div(class="title")
+                                    h3 this is training title
+                                div(class="text")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    a(href="training-apply.html" class="btn") submit now
+                div(class="training-box")
+                    div(class="row")
+                        div(class="col-lg-5 p-0")
+                            div(class="image")
+                                img(data-src="../images/training/02.jpg", class="img-fluid" alt="")
+                        div(class="col-lg-7 p-0")
+                            div(class="details")
+                                div(class="title")
+                                    h3 this is Moot court
+                                div(class="text")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    a(href="training-apply.html" class="btn") submit now
+    section(class="training2")
+        div(class="container")
+            div(class="content")
+                div(class="row")
+                    div(class="col-lg-6 box")
+                        div(class="training-box")
+                            div(class="image")
+                                img(data-src="../images/training/03.jpg", class="img-fluid" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    a(href="") 
+                                        h3 this is training title
+                                //- div(class="text")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                a(href="training-apply.html" class="btn") 
+                                    i(class="bi bi-chevron-right")
+                    div(class="col-lg-6 box")
+                        div(class="training-box")
+                            div(class="image")
+                                img(data-src="../images/training/04.jpg", class="img-fluid" alt="")
+                            div(class="details")
+                                div(class="title")
+                                    a(href="") 
+                                        h3 this is Moot court
+                                //- div(class="text")
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                a(href="training-apply.html" class="btn")
+                                    i(class="bi bi-chevron-right")
+    //training
