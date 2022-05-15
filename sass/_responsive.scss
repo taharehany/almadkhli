@@ -326,6 +326,7 @@
             }
         }
     }
+
     html[dir=rtl] section.about-in-page .content .about-box .about-details .main-title::before {
         right: calc(-26px - 12px);
         left: auto;
@@ -334,7 +335,7 @@
 
 @media screen and (max-width: 767px) {
     .main-title {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
 
         .top-title {
             font-size: 16px;
@@ -383,7 +384,6 @@
             }
         }
     }
-
 
     section.about-in-page {
         .content {
@@ -549,6 +549,18 @@
                         font-size: 18px;
                     }
                 }
+            }
+        }
+    }
+
+    section.company-profile {
+        padding: 70px 0;
+
+        .content {
+            margin-bottom: 60px;
+
+            .company-content {
+                padding: 40px 25px;
             }
         }
     }

@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;600&amp;display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -71,6 +72,14 @@
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="arabic/index.html">arabic</a></li>
                       <li><a class="dropdown-item" href="">english</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">popups</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item"> 
+                          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#failedModal">failed</button></a></li>
+                      <li><a class="dropdown-item">
+                          <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#successModal">success</button></a></li>
                     </ul>
                   </li>
                 </ul>
@@ -132,8 +141,9 @@
         </div>
       </header>
       <!--header-->
-      <!--login modal-->
+      <!--modals-->
       <div class="modals">
+        <!--login modal-->
         <div class="modal login-modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -174,8 +184,91 @@
             </div>
           </div>
         </div>
+        <!--login modal-->
+        <!--success modal-->
+        <div class="modal success-modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="bi bi-check2"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="successModalLabel">success</h5>
+                  <p>thank your for your subscription</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--success modal-->
+        <!--success modal-->
+        <div class="modal failed-modal fade" id="failedModal" tabindex="-1" aria-labelledby="failedModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="icon"><i class="bi bi-x-lg"></i></div>
+                <div class="text">
+                  <h5 class="modal-title" id="failedModalLabel">failed</h5>
+                  <p>example of error message</p>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--success modal-->
+        <!--review modal-->
+        <div class="modal review-modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">review</h5>
+                <button class="btn-close btn-close-white" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form class="g-3 needs-validation" action="" novalidate>
+                  <div class="row">
+                    <div class="col-lg-12">
+                      <div class="rating-area">
+                        <h3>rating: </h3>
+                        <div class="rating" id="post_rating"><span class="ratyli"></span></div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group input-group">
+                        <input class="form-control" type="text" placeholder="Name" required>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group input-group">
+                        <div class="input-group has-validation">
+                          <input class="form-control" type="email" placeholder="Email" required>
+                          <div class="invalid-tooltip">email error</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12 mb-2">
+                      <div class="form-group input-group">
+                        <textarea class="form-control" name="review" cols="30" rows="6" placeholder="review"></textarea>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="form-group btns">
+                        <button class="btn btn-danger" type="submit">send now</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--review modal-->
       </div>
-      <!--login modal-->
       <!--/breadcrumb-->
       <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url('images/bgs/bread.jpg')">
         <div class="shape-1"></div>
@@ -508,7 +601,7 @@
         <div class="container">
           <div class="footer-content">
             <div class="row">
-              <div class="col-lg-4">
+              <div class="col-lg-4 col-md-6">
                 <div class="footer-box logo-box">
                   <div class="text"><a class="footer-logo" href="index.html"> <img class="img-fluid mb-2" data-src="images/logo-white.png" alt=""></a>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, nostrum sed. Sit obcaecati eligendi facilis quod commodi, dolorum consequatur, doloremque excepturi voluptatibus mollitia saepe? Deserunt quod rerum odio officia laudantium!</p>
@@ -518,33 +611,31 @@
                   </div>
                 </div>
               </div>
-              <div class="col-lg-2">
+              <div class="col-lg-2 col-md-6">
                 <div class="footer-box">
-                  <h4 class="title">explore</h4>
+                  <h4 class="title">our services</h4>
                   <ul class="map-links">
-                    <li><a href="knowledge.html">news & insights</a></li>
-                    <li><a href="team.html">the team</a></li>
-                    <li><a href="careers.html">careers</a></li>
-                    <li><a href="terms.html">legal</a></li>
-                    <li><a href="privacy-policy.html">terms & conditions</a></li>
+                    <li><a href="single-service.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-service.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-service.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-service.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-service.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
                   </ul>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-md-6">
                 <div class="footer-box subsc-box">
-                  <h4 class="title">newsletter</h4>
-                  <div class="send-us">
-                    <form action="" method="">
-                      <div class="input-group">
-                        <input class="form-control" type="text" placeholder="Enter your email" aria-label="Recipient's username" aria-describedby="subscribeBtn">
-                        <button class="btn btn-outline-secondary" id="subscribeBtn" type="button"> <i class="bi bi-envelope"></i></button>
-                      </div>
-                    </form>
-                    <p class="hint">Sign up for our latest news & articles. We won’t give you spam mails.</p>
-                  </div>
+                  <h4 class="title">news And Insights</h4>
+                  <ul class="map-links">
+                    <li><a href="single-news.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-news.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-news.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-news.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                    <li><a href="single-news.html">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a></li>
+                  </ul>
                 </div>
               </div>
-              <div class="col-lg-3">
+              <div class="col-lg-3 col-md-6">
                 <div class="footer-box contact-box">
                   <h4 class="title">contact</h4>
                   <div class="contact">
