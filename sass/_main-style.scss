@@ -336,7 +336,7 @@ header {
 	}
 
 	.offcanvas {
-		background-color: $dark_color;
+		background-color: $main_color;
 		@include boxshadow(0 0 60px rgb(0 0 0 / 40%));
 
 		.btn-close {
@@ -357,7 +357,7 @@ header {
 			.navbar-nav {
 				.nav-item {
 					line-height: 1.5;
-					border-bottom: 1px solid #293350;
+					border-bottom: 1px solid #3f50d0;
 
 					.dropdown-toggle {
 						position: relative;
@@ -384,7 +384,7 @@ header {
 
 			.btn {
 				border-inline-end: none !important;
-				border-inline-start: 3px solid $main_color !important;
+				border-inline-start: 3px solid $second_color !important;
 			}
 		}
 	}
@@ -414,7 +414,7 @@ header {
 			&:active,
 			&:hover {
 				box-shadow: none;
-				background-color: $main_color;
+				background-color: $second_color;
 				color: #fff;
 			}
 		}
@@ -631,7 +631,7 @@ header {
 
 			h5 {
 				text-transform: capitalize;
-				font-size: 20px;
+				font-size: 18px;
 			}
 
 			.btn-close {
@@ -667,7 +667,7 @@ header {
 			.input-group-text {
 				background-color: transparent;
 				color: $main_color;
-				font-size: 22px;
+				font-size: 18px;
 				border: none;
 				padding: .375rem 0;
 				padding-inline-end: 5px;
@@ -691,7 +691,7 @@ header {
 			@include transition(all ease 0.3s);
 			color: #333;
 			background-color: #fff;
-			font-size: 18px;
+			font-size: 14px;
 			padding: 15px;
 			border-bottom: 1px solid #eee;
 			@include borderRadius(5px);
@@ -717,6 +717,33 @@ header {
 				&:focus {
 					border-color: $main_color;
 					box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 13%);
+				}
+			}
+		}
+
+		.toggle-link {
+			p {
+				margin-bottom: 0;
+				text-align: center;
+				margin-top: 1rem;
+				font-size: 14px;
+				color: #97a4af;
+				font-weight: 400;
+			}
+
+			.btn {
+				padding: 0;
+				color: $main_color;
+				border: none;
+				line-height: 1;
+				margin-inline-start: 5px;
+				text-transform: capitalize;
+				font-size: 14px;
+
+				&:hover,
+				&:focus {
+					box-shadow: none;
+					outline: none;
 				}
 			}
 		}
@@ -2050,7 +2077,7 @@ section.company-profile {
 			position: absolute;
 			content: '';
 			bottom: -20px;
-			opacity: 0.05;
+			opacity: 0.1;
 			background-color: $main_color;
 			width: 90%;
 			height: 100%;
@@ -2070,6 +2097,8 @@ section.company-profile {
 			width: 100%;
 			position: relative;
 			padding: 50px 70px;
+			background-color: rgba(16, 39, 212);
+			@include borderRadius(7px);
 
 			.company-icon {
 				margin-inline-end: 15px;
@@ -2078,11 +2107,11 @@ section.company-profile {
 			.company-text {
 				&:hover {
 					h3 {
-						color: $main_color;
+						color: $second_color;
 					}
 				}
 				h3 {
-					color: #222222;
+					color: #fff;
 					font-weight: 700;
 					text-transform: capitalize;
 					@include transition(all ease 0.3s);

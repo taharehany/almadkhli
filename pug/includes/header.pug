@@ -183,7 +183,78 @@ div(class="modals")
                             div(class="col-lg-12")
                                 div(class="form-group btns")
                                     button(class="btn btn-danger" type="submit") login now
+                                    button(class="forget-btn" type="button", data-bs-toggle="modal", data-bs-target="#forgetPasswordModal") Forget password?
+                            div(class="col-lg-12 text-center toggle-link")
+                                p Don't have an account?
+                                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#registerModal") Create One
     //login modal
+
+    //register modal
+    div(class="modal register-modal fade", id="registerModal" tabindex="-1", aria-labelledby="registerModalLabel", aria-hidden="true")
+        div(class="modal-dialog")
+            div(class="modal-content")
+                div(class="modal-header")
+                    h5(class="modal-title" id="registerModalLabel") register
+                    button(type="button", class="btn-close btn-close-white", data-bs-dismiss="modal", aria-label="Close")
+                div(class="modal-body")
+                    form(class="g-3 needs-validation" action="" novalidate)
+                        div(class="row")
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    i(class="input-group-text bi bi-person")
+                                    input(type="text" class="form-control" placeholder="Name" required)
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    div(class="input-group has-validation")
+                                        i(class="input-group-text bi bi-envelope")
+                                        input(type="email" class="form-control" placeholder="Email" required)
+                                        div(class="invalid-tooltip")
+                                            | email error
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    i(class="input-group-text bi bi-shield-lock")
+                                    input(type="password" class="form-control" placeholder="Password" required)
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    i(class="input-group-text bi bi-shield-lock")
+                                    input(type="password" class="form-control" placeholder="Confirm Password" required)
+                            div(class="col-lg-12 mb-2")
+                                div(class="form-check")
+                                    input(input class="form-check-input" type="checkbox" id="registerRem")
+                                    label(class="form-check-label", for="registerRem")
+                                        | Remember me
+                                div(class="col-lg-12 text-center")
+                                    div(class="form-group")
+                                        button(class="btn btn-danger" type="submit") register now
+                                div(class="col-lg-12 text-center toggle-link")
+                                    p have an account?
+                                        button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
+    //register modal
+
+    //forget password modal
+    div(class="modal forget-password-modal fade", id="forgetPasswordModal" tabindex="-1", aria-labelledby="forgetPasswordModalLabel", aria-hidden="true")
+        div(class="modal-dialog")
+            div(class="modal-content")
+                div(class="modal-header")
+                    h5(class="modal-title" id="forgetPasswordModalLabel") forget password
+                    button(type="button", class="btn-close btn-close-white", data-bs-dismiss="modal", aria-label="Close")
+                div(class="modal-body")
+                    form(class="g-3 needs-validation" action="" novalidate)
+                        div(class="row")
+                            div(class="col-lg-12")
+                                div(class="form-group input-group flex-nowrap")
+                                    div(class="input-group has-validation")
+                                        i(class="input-group-text bi bi-envelope")
+                                        input(type="email" class="form-control" placeholder="Email" required)
+                                        div(class="invalid-tooltip")
+                                            | email error
+                            div(class="col-lg-12 text-center")
+                                div(class="form-group")
+                                    button(class="btn btn-danger" type="submit") send now
+                            div(class="col-lg-12 text-center toggle-link")
+                                p Don't have an account?
+                                    button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#registerModal") Create One
+    //forget password modal
 
     //success modal
     div(class="modal success-modal fade", id="successModal" tabindex="-1", aria-labelledby="successModalLabel", aria-hidden="true")
@@ -214,7 +285,7 @@ div(class="modals")
     //success modal
 
     //review modal
-    div(class="modal review-modal fade", id="reviewModal" tabindex="-1", aria-labelledby="reviewModalLabel", aria-hidden="true")
+    //- div(class="modal review-modal fade", id="reviewModal" tabindex="-1", aria-labelledby="reviewModalLabel", aria-hidden="true")
         div(class="modal-dialog")
             div(class="modal-content")
                 div(class="modal-header")

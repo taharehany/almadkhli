@@ -2247,6 +2247,7 @@ section.single-blog {
 
             .comments-list {
                 padding: 40px 0;
+                border-top: 1px solid #e2e2e2;
                 border-bottom: 1px solid #e2e2e2;
 
                 .subtitle {
@@ -2349,6 +2350,50 @@ section.single-blog {
 
                 textarea {
                     resize: none;
+                }
+            }
+        }
+
+        .sharing-area {
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+            border-top: 1px solid #e2e2e2;
+            border-bottom: 1px solid #e2e2e2;
+
+            .sharing-title {
+                margin-inline-end: 10px;
+                text-transform: capitalize;
+                font-weight: 600;
+            }
+            .sharing-icons {
+                .icon {
+                    font-size: 16px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 35px;
+                    height: 35px;
+                    border-radius: 0;
+                    color: #fff;
+                    background-color: #d1d6dd;
+                    margin-inline-end: 5px;
+                    @include borderRadius(50%);
+                    @include transition(all ease 0.3s);
+
+                    &:hover {
+                        @include transform(translateY(-5px))
+                    }
+
+                    &.facebook {
+                        background-color: #3b5998;
+                    }
+                    &.twitter {
+                        background-color: #1ea1f3;
+                    }
+                    &.whatsapp {
+                        background-color: #00e676;
+                    }
                 }
             }
         }
