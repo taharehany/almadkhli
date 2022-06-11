@@ -642,6 +642,7 @@ section.single-service {
             img {
                 @include transform(scale(1.1));
             }
+
             .layer {
                 top: 0;
             }
@@ -696,7 +697,8 @@ section.single-service {
                 }
             }
 
-            a, h3 {
+            a,
+            h3 {
                 color: #000;
                 font-size: 20px;
                 line-height: 1.5;
@@ -928,6 +930,7 @@ section.knowledge {
 
                 &:last-child {
                     @include borderRadius(0 10px 10px 0);
+
                     .nav-link {
                         margin-inline-end: 0;
                     }
@@ -1079,7 +1082,7 @@ section.knowledge {
                             color: #e6e6e6;
 
                             &:hover {
-                                color: $main_color
+                                color: $second_color
                             }
                         }
                     }
@@ -2077,7 +2080,7 @@ section.training2 {
                 bottom: 0;
                 @include borderRadius(7px);
                 background-color: $second_color;
-                width:285px;
+                width: 285px;
                 padding: 25px;
                 padding-inline-end: 70px;
                 margin-inline-start: -20px;
@@ -2366,8 +2369,11 @@ section.single-blog {
                 text-transform: capitalize;
                 font-weight: 600;
             }
+
             .sharing-icons {
-                .icon {
+
+                .icon,
+                a {
                     font-size: 16px;
                     display: inline-flex;
                     align-items: center;
@@ -2376,10 +2382,14 @@ section.single-blog {
                     height: 35px;
                     border-radius: 0;
                     color: #fff;
-                    background-color: #d1d6dd;
                     margin-inline-end: 5px;
                     @include borderRadius(50%);
                     @include transition(all ease 0.3s);
+
+                    &::before {
+                        text-indent: 0;
+                        margin-right: 0;
+                    }
 
                     &:hover {
                         @include transform(translateY(-5px))
@@ -2388,9 +2398,11 @@ section.single-blog {
                     &.facebook {
                         background-color: #3b5998;
                     }
+
                     &.twitter {
                         background-color: #1ea1f3;
                     }
+
                     &.whatsapp {
                         background-color: #00e676;
                     }

@@ -62,14 +62,6 @@ header
                                     a(class="dropdown-item", href="404.html") 404
                         li(class="nav-item dropdown")
                             a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
-                                | langs
-                            ul(class="dropdown-menu")
-                                li
-                                    a(class="dropdown-item", href="arabic/index.html") arabic
-                                li
-                                    a(class="dropdown-item", href="") english
-                        li(class="nav-item dropdown")
-                            a(class="nav-link dropdown-toggle", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
                                 | popups
                             ul(class="dropdown-menu")
                                 li
@@ -78,6 +70,13 @@ header
                                 li
                                     a(class="dropdown-item")
                                         button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#successModal") success
+                        li(class="nav-item dropdown langs")
+                            a(class="nav-link", href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false")
+                                img(src="images/icons/en.png", alt="language icon")
+                            ul(class="dropdown-menu")
+                                li
+                                    a(class="dropdown-item", href="arabic/index.html") 
+                                        img(src="images/icons/ar.png", alt="language icon")
                 div(class="login")
                     button(class="btn" type="button", data-bs-toggle="modal", data-bs-target="#loginModal") login now
     //navbar desktop

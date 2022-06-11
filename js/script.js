@@ -1,6 +1,11 @@
 $(document).ready(function () {
   "use strict";
 
+  $(".nav-item.dropdown").hover(function () {
+    var dropdownMenu = $(this).children(".dropdown-menu");
+    dropdownMenu.toggleClass("show");
+  });
+
   //show nav link underline 
   $(".nav-link").on("mouseleave", function () {
     $(this).addClass("change")
@@ -221,15 +226,24 @@ $(document).ready(function () {
     let bgBox = $(`*[data-index="${boxTarget}"]`);
     let allBgBoxs = $(".serv-bg");
 
-    allBgBoxs.css({"background-image": "none", "opacity": 0});
-    bgBox.css({"background-image": `url(${$(this).data('src')})`, "opacity": 1});
+    allBgBoxs.css({
+      "background-image": "none",
+      "opacity": 0
+    });
+    bgBox.css({
+      "background-image": `url(${$(this).data('src')})`,
+      "opacity": 1
+    });
   });
 
   $(".services .serv-backgrounds").mouseleave(function () {
     let boxTarget = $(".services .col-box").data('target', '1');
     let bgBox = $(".serv-bg").data('index', '1');
 
-    bgBox.css({"background-image": `url(${$(boxTarget).data('src')})`, "opacity": 1});
+    bgBox.css({
+      "background-image": `url(${$(boxTarget).data('src')})`,
+      "opacity": 1
+    });
   });
 });
 
